@@ -40,31 +40,13 @@ document.addEventListener("DOMContentLoaded", function() {
         <link id="main-stylesheet" href="../styles/style.css" rel="stylesheet"/>
     `;
 
-    document.head.innerHTML += headContent;
-
-    function isCssLoaded() {
-        const cssLoaded = document.getElementById('main-stylesheet').sheet;
-        return cssLoaded !== undefined;
-    }
-
-    function appendHtmlToBody() {
-        document.body.innerHTML += htmlContent;
-    }
-
-    function waitForCssAndAppendHtml() {
-        if (isCssLoaded()) {
-            appendHtmlToBody();
-        } else {
-            setTimeout(waitForCssAndAppendHtml, 100);
-        }
-    }
-
-    waitForCssAndAppendHtml();
+    document.head.innerHTML += headContent;    
 });
 
 
 async function fetchData(index) {
     try {
+        document.body.innerHTML += htmlContent;
         const response = await fetch('/list.json');
         const data = await response.json();
         const item = data[index];
