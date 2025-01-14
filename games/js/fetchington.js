@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
         </footer>
     `;
 
-    document.body.innerHTML += htmlContent;
-
     const headContent = `
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
 
     document.head.innerHTML += headContent;
+    document.body.innerHTML += htmlContent;
+
 });
 
 
