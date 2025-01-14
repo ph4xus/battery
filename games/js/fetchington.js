@@ -138,8 +138,11 @@
 
         async function fetchData(index) {
             try {
-                // Show the loading screen
-                document.getElementById('loadingScreen').style.display = 'flex';
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    // Show the loading screen
+                    loadingScreen.style.display = 'flex';
+                }
 
                 const response = await fetch('/list.json');
                 const data = await response.json();
@@ -178,10 +181,15 @@
                 document.getElementById('gameFrame').focus();
 
                 // Hide the loading screen after content is loaded
-                document.getElementById('loadingScreen').style.display = 'none';
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
             } catch (error) {
                 console.error('Fetch error:', error);
                 // Hide the loading screen in case of error
-                document.getElementById('loadingScreen').style.display = 'none';
+                const loadingScreen = document.getElementById('loadingScreen');
+                if (loadingScreen) {
+                    loadingScreen.style.display = 'none';
+                }
             }
         }
