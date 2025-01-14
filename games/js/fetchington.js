@@ -37,12 +37,29 @@ document.addEventListener("DOMContentLoaded", function() {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Vafor</title>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-        <link href="../styles/style.css" rel="stylesheet"/>
+        <link id="main-stylesheet" href="../styles/style.css" rel="stylesheet"/>
     `;
 
     document.head.innerHTML += headContent;
-    document.body.innerHTML += htmlContent;
 
+    function isCssLoaded() {
+        const cssLoaded = document.getElementById('main-stylesheet').sheet;
+        return cssLoaded !== undefined;
+    }
+
+    function appendHtmlToBody() {
+        document.body.innerHTML += htmlContent;
+    }
+
+    function waitForCssAndAppendHtml() {
+        if (isCssLoaded()) {
+            appendHtmlToBody();
+        } else {
+            setTimeout(waitForCssAndAppendHtml, 100);
+        }
+    }
+
+    waitForCssAndAppendHtml();
 });
 
 
@@ -87,4 +104,3 @@ async function fetchData(index) {
         console.error('Fetch error:', error);
     }
 }
-
