@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const headContent = `
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Vafor</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+        <link id="main-stylesheet" href="../styles/style.css" rel="stylesheet"/>
+    `;
+
+    document.head.innerHTML += headContent;    
+});
     const htmlContent = `
         <header>
             <h1 style="cursor: pointer; padding-right:20px;" onclick="window.location.href = '/gxmes'">Vafor</h1>
@@ -30,19 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
             <p>&copy; 2024 Vafor IT. All rights reserved. <a href="#">Privacy Policy</a></p>
         </footer>
     `;
-
-    const headContent = `
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Vafor</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-        <link id="main-stylesheet" href="../styles/style.css" rel="stylesheet"/>
-    `;
-
-    document.head.innerHTML += headContent;    
-});
-
 
 async function fetchData(index) {
     try {
