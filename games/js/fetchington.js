@@ -4,6 +4,7 @@ async function fetchData(index) {
         const data = await response.json();
         const item = data[index];
         const name1 = item.name;
+        const imgsrc = item.imgsrc;
         const src = item.linksrc;
 
         console.log("name", name1);
@@ -11,7 +12,8 @@ async function fetchData(index) {
 
         const iframe = document.getElementById('game-iframe');    
         iframe.src = src;
-
+        const image = document.getElementByIf('bottomimage');
+        image.src = imgsrc; 
         document.getElementById('gameTitle').textContent = name1 + ' play now on maxwellstevenson.com';
 
         const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, Vafor IT Work, ' + name1;
@@ -57,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 <span>loading..</span>
             </div>
             <div class="game-image">
-                <img src="https://ph4xus.github.io/assets/img/1v1.webp">
+                <img id="bottomimage">
             </div>
         </div>
     </div>
