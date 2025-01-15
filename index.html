@@ -42,21 +42,12 @@
         }
 
         .game-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             margin-bottom: 20px;
         }
 
         .game-info h2 {
             color: #b7e1c0;
             margin-bottom: 10px;
-        }
-
-        .game-info img {
-            width: 200px;
-            height: auto;
-            border-radius: 10px;
         }
 
         .game-iframe {
@@ -68,12 +59,18 @@
             margin-bottom: 20px;
         }
 
-        .keywords {
+        .keywords-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             background-color: #3e3e3e;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-bottom: 20px;
+        }
+
+        .keywords {
+            flex: 1;
         }
 
         .keywords h3 {
@@ -96,6 +93,17 @@
             background-color: #b7e1c0;
             color: #1a1a1a;
             transform: scale(1.1);
+        }
+
+        .game-image {
+            flex: 1;
+            text-align: right;
+        }
+
+        .game-image img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
         }
 
         footer {
@@ -121,19 +129,21 @@
     </header>
     <div class="content">
         <div class="game-info">
-            <div>
-                <h2>Awesome Game</h2>
-            </div>
-            <img src="https://ph4xus.github.io/assets/img/1v1.webp" alt="Awesome Game Image">
+            <h2>Awesome Game</h2>
         </div>
         <iframe class="game-iframe" src="https://example.com/embedded-game"></iframe>
-        <div class="keywords">
-            <h3>Keywords:</h3>
-            <span>game</span>
-            <span>online game</span>
-            <span>game hub</span>
-            <span>play game</span>
-            <span>embedded game</span>
+        <div class="keywords-section">
+            <div class="keywords">
+                <h3>Keywords:</h3>
+                <span>game</span>
+                <span>online game</span>
+                <span>game hub</span>
+                <span>play game</span>
+                <span>embedded game</span>
+            </div>
+            <div class="game-image">
+                <img src="https://ph4xus.github.io/assets/img/1v1.webp" alt="Awesome Game Image">
+            </div>
         </div>
     </div>
     <footer>
