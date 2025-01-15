@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = './styles/style.css';
+    link.href = '../styles/style.css';
     
     document.head.appendChild(link);
     
