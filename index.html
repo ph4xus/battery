@@ -72,9 +72,12 @@
         .keywords {
             flex: 1;
             text-align: left;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .keywords h3 {
+            width: 100%;
             color: #b7e1c0;
             margin-bottom: 10px;
         }
@@ -88,6 +91,7 @@
             border-radius: 20px;
             font-size: 0.9rem;
             transition: background-color 0.3s, transform 0.2s;
+            flex: 1 1 calc(33% - 10px); /* Allow 3 items per row with some margin */
         }
 
         .keywords span:hover {
@@ -141,9 +145,12 @@
                 <span>game hub</span>
                 <span>play game</span>
                 <span>embedded game</span>
+                <span>fun</span>
+                <span>multiplayer</span>
+                <span>strategy</span>
             </div>
             <div class="game-image">
-                <img src="https://ph4xus.github.io/assets/img/1v1.webp" alt="Awesome Game Image">
+                <img src="path/to/game-image.jpg" alt="Awesome Game Image">
             </div>
         </div>
     </div>
