@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'styles/style.css';
+    
+    document.head.appendChild(link);
+    
     const html3 = `
     <header>
         <a class="title" href="/gxmes">Vafor</a>
