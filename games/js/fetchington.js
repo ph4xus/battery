@@ -25,11 +25,16 @@ async function fetchData(index) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '../styles/style.css';
+    const link1 = document.createElement('link');
+    link1.rel = 'stylesheet';
+    link1.href = '../styles/style.css';
     
-    document.head.appendChild(link);
+    const link2 = document.createElement('link');
+    link2.rel = 'stylesheet';
+    link2.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+    
+    document.head.appendChild(link1);
+    document.head.appendChild(link2);
     
     const html3 = `
     <header>
