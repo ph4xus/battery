@@ -1,4 +1,4 @@
-    const html = `
+    const html3 = `
     <header>
         <a class="title" href="/gxmes">Vafor</a>
         <nav>
@@ -44,4 +44,4 @@
 
 const bodyTag = document.body;
 
-bodyTag.innerHTML += html;
+bodyTag.innerHTML += html3;
