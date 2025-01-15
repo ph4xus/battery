@@ -7,7 +7,7 @@
     <meta name="keywords" content="game, online game, game hub, play game, embedded game">
     <meta name="description" content="Play the best online games here.">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -55,29 +55,38 @@
             flex: 1;
         }
 
-        .fullscreen-btn {
-            background-color: #b7e1c0;
-            color: #1a1a1a;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .fullscreen-btn:hover {
-            background-color: #a0d1a4;
-            transform: translateY(-2px);
-        }
-
         .game-iframe {
             width: 80%;
             height: 500px;
             border: none;
-            border-radius: 10px;
+            border-radius: 10px 10px 0 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-bottom: 20px;
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+
+        .fullscreen-strip {
+            width: 80%;
+            background-color: #555;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+            margin: 0 auto 20px; /* Center and add bottom margin */
+        }
+
+        .fullscreen-btn {
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .fullscreen-btn:hover {
+            background-color: #444;
         }
 
         .keywords-section {
@@ -157,9 +166,13 @@
     <div class="content">
         <div class="game-info">
             <h2>Awesome Game</h2>
-            <button class="fullscreen-btn" onclick="toggleFullscreen()">Fullscreen</button>
         </div>
         <iframe id="game-iframe" class="game-iframe" src="https://example.com/embedded-game"></iframe>
+        <div class="fullscreen-strip">
+            <button class="fullscreen-btn" onclick="toggleFullscreen()">
+                <i class="fas fa-expand"></i>
+            </button>
+        </div>
         <div class="keywords-section">
             <div class="keywords">
                 <h3>Keywords:</h3>
@@ -173,7 +186,7 @@
                 <span>strategy</span>
             </div>
             <div class="game-image">
-                <img src="https://ph4xus.github.io/assets/img/1v1.webp" alt="Awesome Game Image">
+                <img src="path/to/game-image.jpg" alt="Awesome Game Image">
             </div>
         </div>
     </div>
