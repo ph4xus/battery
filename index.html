@@ -42,6 +42,9 @@
         }
 
         .game-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             margin-bottom: 20px;
         }
 
@@ -53,13 +56,29 @@
         .game-info img {
             width: 200px;
             height: auto;
-            display: block;
-            margin: 0 auto 20px auto;
             border-radius: 10px;
         }
 
-        .keywords {
+        .game-iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
             margin-bottom: 20px;
+        }
+
+        .keywords {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .keywords h3 {
+            color: #b7e1c0;
+            margin-bottom: 10px;
         }
 
         .keywords span {
@@ -77,14 +96,6 @@
             background-color: #b7e1c0;
             color: #1a1a1a;
             transform: scale(1.1);
-        }
-
-        .game-iframe {
-            width: 100%;
-            height: 500px;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
 
         footer {
@@ -110,17 +121,20 @@
     </header>
     <div class="content">
         <div class="game-info">
-            <h2>Awesome Game</h2>
+            <div>
+                <h2>Awesome Game</h2>
+            </div>
             <img src="path/to/game-image.jpg" alt="Awesome Game Image">
         </div>
+        <iframe class="game-iframe" src="https://example.com/embedded-game"></iframe>
         <div class="keywords">
+            <h3>Keywords:</h3>
             <span>game</span>
             <span>online game</span>
             <span>game hub</span>
             <span>play game</span>
             <span>embedded game</span>
         </div>
-        <iframe class="game-iframe" src="https://example.com/embedded-game"></iframe>
     </div>
     <footer>
         <p>© 2025 Game Hub. All Rights Reserved.</p>
