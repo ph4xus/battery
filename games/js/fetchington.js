@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
     const html3 = `
     <header>
         <a class="title" href="/gxmes">Vafor</a>
@@ -42,6 +43,7 @@
     </footer>
     `;
 
-const bodyTag = document.body;
+    const bodyTag = document.body;
 
-bodyTag.innerHTML += html3;
+    bodyTag.innerHTML += html3;
+});
