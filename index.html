@@ -61,7 +61,8 @@
             border: none;
             border-radius: 10px 10px 0 0;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            margin-bottom: 0; /* Remove bottom margin */
+            margin: 0 auto; /* Ensure iframe is centered */
+            display: block; /* Ensure iframe is block element */
         }
 
         .fullscreen-strip {
@@ -73,6 +74,7 @@
             align-items: center;
             border-radius: 0 0 10px 10px;
             margin: 0 auto 20px; /* Center and add bottom margin */
+            margin-top: -5px; /* Remove gap between iframe and strip */
         }
 
         .fullscreen-btn {
