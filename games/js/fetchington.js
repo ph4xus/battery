@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
     </header>
     <div class="content">
         <div class="game-info">
-            <h2>Loading...</h2>
+            <h2 id="gameTitle">Loading...</h2>
         </div>
         <iframe id="game-iframe" class="game-iframe" src=""></iframe>
         <div class="fullscreen-strip">
