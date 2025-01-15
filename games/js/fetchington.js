@@ -15,6 +15,17 @@ function fetchData(index) {
         document.getElementById('gameTitle').textContent = name1 + ' play now on maxwellstevenson.com';
 
         const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, Vafor IT Work, ' + name1;
+        const keywordsArray = keywords.split(', ');
+
+        const container = document.querySelector('.keywords');
+        
+        container.innerHTML = '';
+        
+        keywordsArray.forEach(keyword => {
+            const span = document.createElement('span');
+            span.textContent = keyword;
+            container.appendChild(span);
+        });
 
         document.getElementById('game-Iframe').focus();
     } catch (error) {
