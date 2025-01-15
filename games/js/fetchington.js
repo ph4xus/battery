@@ -12,7 +12,7 @@ async function fetchData(index) {
 
         const iframe = document.getElementById('game-iframe');    
         iframe.src = src;
-        const image = document.getElementByIf('bottomimage');
+        const image = document.getElementById('bottomimage');
         image.src = imgsrc; 
         document.getElementById('gameTitle').textContent = name1 + ' play now on maxwellstevenson.com';
 
