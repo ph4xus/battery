@@ -1,4 +1,4 @@
-function fetchData(index) {
+async function fetchData(index) {
     try {
         const response = await fetch('/list.json');
         const data = await response.json();
@@ -9,32 +9,18 @@ function fetchData(index) {
         console.log("name", name1);
         console.log("src", src);
 
-        const iframe = document.getElementById('game-Iframe');    
+        const iframe = document.getElementById('game-iframe');    
         iframe.src = src;
 
         document.getElementById('gameTitle').textContent = name1 + ' play now on maxwellstevenson.com';
 
         const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, Vafor IT Work, ' + name1;
-        const keywordsArray = keywords.split(', ');
 
-        const container = document.querySelector('.keywords');
-        
-        container.innerHTML = '';
-        
-        keywordsArray.forEach(keyword => {
-            const span = document.createElement('span');
-            span.textContent = keyword;
-            container.appendChild(span);
-        });
-
-        document.getElementById('game-Iframe').focus();
+        document.getElementById('game-iframe').focus();
     } catch (error) {
         console.error('Fetch error:', error);
     }
 }
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const link = document.createElement('link');
