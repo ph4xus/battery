@@ -18,6 +18,18 @@ async function fetchData(index) {
 
         const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, Vafor IT Work, ' + name1;
 
+        const keywordsArray = keywords.split(', ');
+
+        const keywordsDiv = document.querySelector('.keywords');
+
+        keywordsDiv.innerHTML = '<h3>Keywords:</h3>';
+
+        keywordsArray.forEach(keyword => {
+            const span = document.createElement('span');
+            span.textContent = keyword;
+            keywordsDiv.appendChild(span);
+        });
+
         document.getElementById('game-iframe').focus();
     } catch (error) {
         console.error('Fetch error:', error);
