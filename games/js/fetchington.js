@@ -1,3 +1,30 @@
+function fetchData(index) {
+    try {
+        const response = await fetch('/list.json');
+        const data = await response.json();
+        const item = data[index];
+        const name1 = item.name;
+        const src = item.linksrc;
+
+        console.log("name", name1);
+        console.log("src", src);
+
+        const iframe = document.getElementById('game-Iframe');    
+        iframe.src = src;
+
+        document.getElementById('gameTitle').textContent = name1 + ' play now on maxwellstevenson.com';
+
+        const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, Vafor IT Work, ' + name1;
+
+        document.getElementById('game-Iframe').focus();
+    } catch (error) {
+        console.error('Fetch error:', error);
+    }
+}
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
@@ -19,9 +46,9 @@ document.addEventListener("DOMContentLoaded", function() {
     </header>
     <div class="content">
         <div class="game-info">
-            <h2>Awesome Game</h2>
+            <h2>Loading...</h2>
         </div>
-        <iframe id="game-iframe" class="game-iframe" src="https://example.com/embedded-game"></iframe>
+        <iframe id="game-iframe" class="game-iframe" src=""></iframe>
         <div class="fullscreen-strip">
             <button class="fullscreen-btn" onclick="toggleFullscreen()">
                 <i class="fas fa-expand"></i>
@@ -30,14 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="keywords-section">
             <div class="keywords">
                 <h3>Keywords:</h3>
-                <span>game</span>
-                <span>online game</span>
-                <span>game hub</span>
-                <span>play game</span>
-                <span>embedded game</span>
-                <span>fun</span>
-                <span>multiplayer</span>
-                <span>strategy</span>
+                <span>loading..</span>
             </div>
             <div class="game-image">
                 <img src="https://ph4xus.github.io/assets/img/1v1.webp">
