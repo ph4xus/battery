@@ -16,13 +16,46 @@
 
         header {
             background-color: #262626;
-            padding: 20px;
+            padding: 60px 20px;
             text-align: center;
+            background: linear-gradient(135deg, #00b4d8, #00d4f7);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+            color: #ffffff;
         }
 
         header h1 {
-            font-size: 36px;
-            color: #00b4d8;
+            font-size: 48px;
+            margin: 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        header p {
+            font-size: 20px;
+            margin-top: 10px;
+            opacity: 0.8;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .cta-btn {
+            margin-top: 30px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #262626;
+            background-color: #00b4d8;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover {
+            background-color: #00d4f7;
+            transform: scale(1.1);
         }
 
         .game-list {
@@ -75,12 +108,27 @@
             transform: scale(1.05);
             box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
         }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Flashy Header -->
     <header>
         <h1>Welcome to Our Game Portal</h1>
+        <p>Explore, Play, and Enjoy a Collection of Awesome Games</p>
+        <a href="/games" class="cta-btn">Start Playing Now</a>
     </header>
 
     <section class="game-list" id="random-games">
@@ -105,7 +153,7 @@
                     const gameCard = document.createElement('div');
                     gameCard.classList.add('game');
                     gameCard.innerHTML = `
-                        <img src="${game.imgsrc}" alt="${game.name}">
+                        <img src="https://maxwellstevenson.com/${game.imgsrc}" alt="${game.name}">
                         <h3>${game.name}</h3>
                         <a href="${game.linksrc}" target="_blank">Play Now</a>
                     `;
@@ -118,4 +166,3 @@
 </body>
 </html>
 
-</html>
