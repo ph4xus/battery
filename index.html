@@ -179,6 +179,20 @@
         .footer a:hover {
             color: #a0d1a4;
         }
+        .backup-links a {
+            display: inline-block;
+            width: 145px; /* Set the same width as the image links */
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #444;
+            color: #eaeaea;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .backup-links a:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
@@ -210,10 +224,11 @@
         <div class="section-box" id="about">
             <h2>About & Backup Links</h2>
             <p>Learn more about us and find backup links in case this site is blocked.</p>
-            <a href="#about">About</a>
-            <a href="https://maxwellstevenson.com" target="_blank">maxwellstevenson.com</a>
-            <a href="https://phexus.bitbucket.io" target="_blank">phexus.bitbucket.io</a>
-            <a href="https://ph4xus.github.io" target="_blank">ph4xus.github.io</a>
+            <div class="backup-links">
+                <a href="https://maxwellstevenson.com" target="_blank">maxwellstevenson.com</a>
+                <a href="https://phexus.bitbucket.io" target="_blank">phexus.bitbucket.io</a>
+                <a href="https://ph4xus.github.io" target="_blank">ph4xus.github.io</a>
+            </div>
         </div>
     </section>
     <footer class="footer">
