@@ -1,8 +1,10 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gxmes - Welcome to maxwellstevenson.com</title>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <style>
@@ -19,19 +21,25 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        .navbar, .footer {
+        .navbar {
             background-color: #3e3e3e;
             padding: 15px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .navbar a, .footer a {
+        .navbar a {
             color: #eaeaea;
             text-decoration: none;
             font-weight: 600;
             margin: 0 10px;
         }
-        .navbar a:hover, .footer a:hover {
+        .navbar a:hover {
             color: #b7e1c0;
+        }
+        .nav-links {
+            display: flex;
+            gap: 1rem;
         }
         .hero-section {
             background-color: #1a1a1a;
@@ -60,11 +68,15 @@
             background-color: #a0d1a4;
             transform: translateY(-2px);
         }
+        .main-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
         .gxme-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             gap: 15px;
-            padding: 40px 20px;
             background-color: #3e3e3e;
             flex-grow: 1;
         }
@@ -93,7 +105,7 @@
         }
         .backup-section {
             background-color: #3e3e3e;
-            padding: 40px 20px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
             margin: 20px 0;
@@ -118,6 +130,30 @@
         .backup-section a:hover {
             color: #a0d1a4;
         }
+        .sidebar {
+            background-color: #3e3e3e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+        }
+        .sidebar h2 {
+            color: #b7e1c0;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .sidebar p {
+            color: #eaeaea;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #3e3e3e;
+            padding: 15px;
+            text-align: center;
+            flex-shrink: 0;
+        }
         .footer p {
             font-size: 0.9rem;
         }
@@ -126,22 +162,28 @@
 <body>
     <nav class="navbar">
         <a href="/gxmes">Gxmes</a>
+        <div class="nav-links">
+            <a href="https://ph4xus.github.io">Backup 1</a>
+            <a href="https://phexus.bitbucket.io">Backup 2</a>
+            <a href="https://maxwellstevenson.com">Backup 3</a>
+        </div>
     </nav>
     <section class="hero-section">
         <h1>Welcome to Vafor IT</h1>
         <p>Explore over 70+ exciting gxmes from all genres</p>
         <button class="btn-custom" onclick="randombutton()">Start Playing</button>
     </section>
-    <section class="gxme-grid" id="gxmeGrid">
-        <!-- Random selected games will be appended here by JavaScript -->
-    </section>
-    <section class="backup-section">
-        <h2>Backup Links</h2>
-        <p>Make sure to have backups in case any of these links get blocked.</p>
-        <a href="https://ph4xus.github.io">ph4xus.github.io</a>
-        <a href="https://phexus.bitbucket.io">phexus.bitbucket.io</a>
-        <a href="https://maxwellstevenson.com">maxwellstevenson.com</a>
-    </section>
+    <div class="main-content">
+        <section class="gxme-grid" id="gxmeGrid">
+            <!-- Random selected games will be appended here by JavaScript -->
+        </section>
+        <aside class="sidebar">
+            <h2>About Us</h2>
+            <p>Welcome to Vafor IT, your ultimate destination for online games. Enjoy a variety of games and have fun!</p>
+            <h2>Contact</h2>
+            <p>Email: support@maxwellstevenson.com</p>
+        </aside>
+    </div>
     <footer class="footer">
         <p>© 2025 maxwellstevenson.com. All Rights Reserved.</p>
         <p>Open an issue: <a href="https://github.com/v4for/v4for.github.io">Official repository</a></p>
@@ -193,5 +235,5 @@
             randomLink.click();
         }
     </script>
-
-</body></html>
+</body>
+</html>
