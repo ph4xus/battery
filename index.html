@@ -34,7 +34,7 @@
             background-color: #3e3e3e;
             padding: 15px;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             height: 82px;
             position: fixed;
@@ -50,6 +50,15 @@
         }
         .navbar a:hover {
             color: #b7e1c0;
+        }
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
         }
         .hero-section {
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('path/to/your/background.jpg') center/cover no-repeat;
@@ -118,58 +127,38 @@
             color: #b7e1c0;
             margin-top: 10px;
         }
-        .advertise-section {
-            background-color: #3e3e3e;
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 20px;
+        }
+        .section-box {
+            background-color: #3e3e3e;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            margin: 20px 0;
+            padding: 20px;
+            flex: 1 1 300px;
             text-align: center;
         }
-        .advertise-section h2 {
+        .section-box h2 {
             color: #b7e1c0;
             font-size: 2rem;
             margin-bottom: 20px;
         }
-        .advertise-section p {
+        .section-box p {
             color: #eaeaea;
             font-size: 1.2rem;
             margin-bottom: 20px;
         }
-        .advertise-section a {
+        .section-box a {
             color: #b7e1c0;
             text-decoration: none;
             font-weight: 600;
             margin: 0 10px;
         }
-        .advertise-section a:hover {
-            color: #a0d1a4;
-        }
-        .about-backup-section {
-            background-color: #3e3e3e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            margin: 20px 0;
-            text-align: center;
-        }
-        .about-backup-section h2 {
-            color: #b7e1c0;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .about-backup-section p {
-            color: #eaeaea;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .about-backup-section a {
-            color: #b7e1c0;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 10px;
-        }
-        .about-backup-section a:hover {
+        .section-box a:hover {
             color: #a0d1a4;
         }
         .footer {
@@ -192,8 +181,10 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="/gxmes">Vafor</a>
-        <div class="nav-links">
+        <div class="nav-left">
+            <a href="/gxmes">Vafor</a>
+        </div>
+        <div class="nav-right">
             <a href="/gxmes">Gxmes</a>
             <a href="#about">About</a>
         </div>
@@ -207,18 +198,20 @@
         <section class="gxme-grid" id="gxmeGrid">
         </section>
     </div>
-    <section class="advertise-section">
-        <h2>Check Out All Our Games</h2>
-        <p>Visit our gxmes website to see the full list of games available.</p>
-        <a href="/gxmes" class="btn-custom">Go to Gxmes</a>
-    </section>
-    <section class="about-backup-section" id="about">
-        <h2>About & Backup Links</h2>
-        <p>Learn more about us and find backup links in case this site is blocked.</p>
-        <a href="#about">About</a>
-        <a href="https://maxwellstevenson.com" target="_blank">maxwellstevenson.com</a>
-        <a href="https://phexus.bitbucket.io" target="_blank">phexus.bitbucket.io</a>
-        <a href="https://ph4xus.github.io" target="_blank">ph4xus.github.io</a>
+    <section class="section-container">
+        <div class="section-box">
+            <h2>Check Out All Our Games</h2>
+            <p>Visit our gxmes website to see the full list of games available.</p>
+            <a href="/gxmes" class="btn-custom">Go to Gxmes</a>
+        </div>
+        <div class="section-box" id="about">
+            <h2>About & Backup Links</h2>
+            <p>Learn more about us and find backup links in case this site is blocked.</p>
+            <a href="#about">About</a>
+            <a href="https://maxwellstevenson.com" target="_blank">maxwellstevenson.com</a>
+            <a href="https://phexus.bitbucket.io" target="_blank">phexus.bitbucket.io</a>
+            <a href="https://ph4xus.github.io" target="_blank">ph4xus.github.io</a>
+        </div>
     </section>
     <footer class="footer">
         <p>© 2025 maxwellstevenson.com. All Rights Reserved.</p>
