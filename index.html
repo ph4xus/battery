@@ -88,17 +88,21 @@
             background-color: #a0d1a4;
             transform: translateY(-2px);
         }
-        .main-content {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
+        .bentobox {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
             gap: 20px;
-            margin-top: 20px;
+            padding: 20px;
+            margin: 20px auto;
             width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            flex-direction: column;
-            align-items: center;
+        }
+        .bentobox > div {
+            background-color: #3e3e3e;
+            border-radius: 10px;
+            padding: 20px;
+            color: #eaeaea;
+            text-align: center;
         }
         .gxme-grid {
             display: flex;
@@ -133,35 +137,19 @@
             color: #b7e1c0;
             margin-top: 10px;
         }
-        .section-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
-        }
-        .section-box {
-            background-color: #3e3e3e;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            flex: 1 1 300px;
-            text-align: center;
-        }
-        .section-box h2 {
-            color: #b7e1c0;
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .section-box p {
-            color: #eaeaea;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        .section-box .btn-custom {
-            text-decoration: none;
+        .link-section a {
             display: inline-block;
-            margin-top: 10px;
+            width: 145px; /* Set the same width as the image links */
+            text-align: center;
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #444;
+            color: #eaeaea;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .link-section a:hover {
+            background-color: #555;
         }
         .footer {
             background-color: #3e3e3e;
@@ -178,20 +166,6 @@
         }
         .footer a:hover {
             color: #a0d1a4;
-        }
-        .link-section a {
-            display: inline-block;
-            width: 145px; /* Set the same width as the image links */
-            text-align: center;
-            margin: 5px 0;
-            padding: 10px;
-            background-color: #444;
-            color: #eaeaea;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-        .link-section a:hover {
-            background-color: #555;
         }
     </style>
 </head>
@@ -210,26 +184,22 @@
         <p>Explore over 70+ exciting gxmes from all genres</p>
         <button class="btn-custom" onclick="randombutton()">Start Playing</button>
     </section>
-    <section class="main-content">
-        <h2>Try Out Our Gxmes</h2>
-        <section class="gxme-grid" id="gxmeGrid">
-        </section>
-    </section>
-    <section class="section-container">
-        <div class="section-box link-section">
+    <section class="bentobox">
+        <div>
+            <h2>Try Out Our Gxmes</h2>
+            <section class="gxme-grid" id="gxmeGrid">
+            </section>
+        </div>
+        <div class="link-section">
             <h2>Check Out All Our Games</h2>
             <p>Visit our gxmes website to see the full list of games available.</p>
             <a href="/gxmes" class="btn-custom">Go to Gxmes</a>
         </div>
-    </section>
-    <section class="section-container">
-        <div class="section-box" id="about">
+        <div id="about">
             <h2>About Us</h2>
             <p>Learn more about us and our mission to bring you the best online gaming experience.</p>
         </div>
-    </section>
-    <section class="section-container">
-        <div class="section-box link-section">
+        <div class="link-section">
             <h2>Backup Links</h2>
             <p>Find backup links in case this site is blocked.</p>
             <a href="https://maxwellstevenson.com" target="_blank">maxwellstevenson.com</a>
