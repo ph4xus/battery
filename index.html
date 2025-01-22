@@ -118,18 +118,26 @@
             font-size: 2rem;
             margin-bottom: 20px;
         }
-        .testimonial {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin: 10px auto;
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
             padding: 20px;
-            color: #333;
-            max-width: 600px;
+        }
+        .testimonial {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            color: #eaeaea;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.3s;
         }
         .testimonial p {
-            margin: 0;
+            margin-bottom: 10px;
+        }
+        .testimonial:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
         }
         .backup-section {
             background-color: #3e3e3e;
@@ -187,13 +195,23 @@
     </section>
     <section class="testimonial-section">
         <h2>What Our Users Say</h2>
-        <div class="testimonial">
-            <p>"Unblxed School Games has the best selection of games that are always accessible. It's my go-to site during school breaks!"</p>
-            <p>- Alex, Student</p>
-        </div>
-        <div class="testimonial">
-            <p>"I love how easy it is to find and play my favorite games here. The site is reliable and offers a great gaming experience."</p>
-            <p>- Jamie, Student</p>
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"Unblxed School Games has the best selection of games that are always accessible. It's my go-to site during school breaks!"</p>
+                <p>- Alex, Student</p>
+            </div>
+            <div class="testimonial">
+                <p>"I love how easy it is to find and play my favorite games here. The site is reliable and offers a great gaming experience."</p>
+                <p>- Jamie, Student</p>
+            </div>
+            <div class="testimonial">
+                <p>"The variety of games available is amazing. I never get bored during my free periods!"</p>
+                <p>- Chris, Student</p>
+            </div>
+            <div class="testimonial">
+                <p>"Unblxed School Games is the best for unblocked games. Highly recommend it to all students!"</p>
+                <p>- Taylor, Student</p>
+            </div>
         </div>
     </section>
     <section class="backup-section">
