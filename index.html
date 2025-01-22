@@ -213,7 +213,7 @@
         <button class="btn-custom" onclick="randombutton()">Start Playing</button>
     </section>
     <section class="main-content">
-        <h2>Featured Games</h2>
+        <h2>Featured gxmes</h2>
         <div class="gxme-grid" id="gxmeGrid">
         </div>
     </section>
@@ -222,19 +222,19 @@
         <h2>What Our Users Say</h2>
         <div class="testimonial-grid">
             <div class="testimonial">
-                <p>"Unblxed School Games has the best selection of games that are always accessible. It's my go-to site during school breaks!"</p>
+                <p>"Unblxed School gxmes has the best selection of gxmes that are always accessible. It's my go-to site during school breaks!"</p>
                 <p>- Alex, Student</p>
             </div>
             <div class="testimonial">
-                <p>"I love how easy it is to find and play my favorite games here. The site is reliable and offers a great gaming experience."</p>
+                <p>"I love how easy it is to find and play my favorite gxmes here. The site is reliable and offers a great gaming experience."</p>
                 <p>- Jamie, Student</p>
             </div>
             <div class="testimonial">
-                <p>"The variety of games available is amazing. I never get bored during my free periods!"</p>
+                <p>"The variety of gxmes available is amazing. I never get bored during my free periods!"</p>
                 <p>- Chris, Student</p>
             </div>
             <div class="testimonial">
-                <p>"Unblxed School Games is the best for unblocked games. Highly recommend it to all students!"</p>
+                <p>"Unblxed School gxmes is the best for unblocked gxmes. Highly recommend it to all students!"</p>
                 <p>- Taylor, Student</p>
             </div>
         </div>
@@ -243,7 +243,7 @@
     <!-- New About Us Section -->
     <section class="about-section" id="about">
         <h2>About Us</h2>
-        <p>Welcome to Vafor IT, your ultimate destination for unblocked games. Our mission is to provide a safe, fun, and accessible gaming experience for students everywhere. Discover a wide variety of games across multiple genres and enjoy endless hours of entertainment. Join our community and start playing today!</p>
+        <p>Welcome to Vafor IT, your ultimate destination for unblocked gxmes. Our mission is to provide a safe, fun, and accessible gaming experience for students everywhere. Discover a wide variety of gxmes across multiple genres and enjoy endless hours of entertainment. Join our community and start playing today!</p>
     </section>
 
     <footer class="footer">
@@ -256,11 +256,11 @@
                 .then(response => response.json())
                 .then(data => {
                     const gxmeGrid = document.getElementById('gxmeGrid');
-                    const randomGames = data.sort(() => 0.5 - Math.random()).slice(0, 4);
+                    const randomgxmes = data.sort(() => 0.5 - Math.random()).slice(0, 4);
 
-                    randomGames.forEach(game => {
+                    randomgxmes.forEach(gxme => {
                         let gxmeLink = document.createElement('a');
-                        gxmeLink.href = game.linksrc;
+                        gxmeLink.href = gxme.linksrc;
                         gxmeLink.style.textDecoration = 'none';
                         gxmeLink.style.color = 'inherit';
 
@@ -269,13 +269,13 @@
                         gxmeCard.style.cursor = 'pointer';
 
                         let img = document.createElement('img');
-                        img.src = "https://ph4xus.github.io" + game.imgsrc;
-                        img.alt = game.name;
+                        img.src = "https://ph4xus.github.io" + gxme.imgsrc;
+                        img.alt = gxme.name;
                         img.style.height = "145px";
                         img.style.width = "145px";
 
                         let h3 = document.createElement('h3');
-                        h3.textContent = game.name;
+                        h3.textContent = gxme.name;
 
                         gxmeCard.appendChild(img);
                         gxmeCard.appendChild(h3);
