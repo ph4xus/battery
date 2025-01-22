@@ -85,6 +85,7 @@
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
+            justify-content: center; /* Center the grid items */
         }
         .gxme-card {
             background-color: #444;
@@ -128,6 +129,7 @@
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
+            justify-content: center; /* Center the grid items */
         }
         .testimonial {
             background-color: #444;
@@ -269,7 +271,7 @@
                         gxmeCard.style.cursor = 'pointer';
 
                         let img = document.createElement('img');
-                        img.src = game.imgsrc;
+                        img.src = "https://ph4xus.github.io" + game.imgsrc;
                         img.alt = game.name;
 
                         let h3 = document.createElement('h3');
