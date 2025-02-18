@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 background-color: #444;
                 border-radius: 10px;
                 overflow: hidden;
-                width: calc(20% - 12px);
+                width: 220px;
                 text-align: center;
                 transition: transform 0.3s ease;
             }
