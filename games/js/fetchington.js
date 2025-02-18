@@ -1,46 +1,3 @@
-async function fetchData(index) {
-    try {
-        const response = await fetch('/list.json');
-        const data = await response.json();
-        const item = data[index];
-        const name1 = item.name;
-        const imgsrc = item.imgsrc;
-        const src = item.linksrc;
-
-        console.log("name", name1);
-        console.log("src", src);
-
-        const iframe = document.getElementById('game-iframe');    
-        iframe.src = src;
-        const image = document.getElementById('bottomimage');
-        image.src = imgsrc; 
-        document.getElementById('gameTitle').textContent = 'Play ' + name1 + ' on maxwellstevenson.com';
-        document.title = 'Play ' + name1 + ' on maxwellstevenson.com';
-        const imgSrc = imgsrc; document.head.appendChild(Object.assign(document.createElement('link'), { rel: 'icon', href: imgSrc, id: 'faviconLink' }));
-        const keywords = 'gxme, gxmes, ' + name1 + ' unblxcked, ' + name1 + ' maxwellstevenson.com, Vafor, Vafor IT, ' + name1 + ', ' + name1 + ' ' + 'school' + ', github gxmes, github ' + name1;
-        var meta = document.createElement('meta');
-        meta.name = 'description';
-        meta.content = 'Play ' + name1 + ' on maxwellstevenson.com';
-        document.getElementsByTagName('head')[0].appendChild(meta);
-
-    
-        const keywordsArray = keywords.split(', ');
-
-        const keywordsDiv = document.querySelector('.keywords');
-
-        keywordsDiv.innerHTML = '<h3>Keywords:</h3>';
-
-        keywordsArray.forEach(keyword => {
-            const span = document.createElement('span');
-            span.textContent = keyword;
-            keywordsDiv.appendChild(span);
-        });
-
-        document.getElementById('game-iframe').focus();
-    } catch (error) {
-        console.error('Fetch error:', error);
-    }
-}
 document.addEventListener("DOMContentLoaded", function () {
     // Fetch Font Awesome CSS
     const link2 = document.createElement("link");
@@ -52,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bodyTag = document.body;
     bodyTag.innerHTML = `
         <style>
-            * {
+             * {
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
@@ -304,7 +261,13 @@ document.addEventListener("DOMContentLoaded", function () {
             const recommendedGamesContainer = document.getElementById('recommendedGames');
             recommendedGamesContainer.innerHTML = ''; 
 
-            const shuffledGames = data.sort(() => 0.5 - Math.random()).slice(0, 5);
+            // Calculate the number of cards that fit in the available space
+            const cardWidth = 220; // Width of each card in pixels
+            const containerWidth = recommendedGamesContainer.clientWidth;
+            const cardsPerRow = Math.floor(containerWidth / cardWidth);
+
+            // Shuffle the games and slice based on the calculated number of cards
+            const shuffledGames = data.sort(() => 0.5 - Math.random()).slice(0, cardsPerRow);
 
             shuffledGames.forEach(game => {
                 const gameCard = document.createElement('div');
@@ -322,7 +285,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    
+    // Re-render cards on window resize
+    window.addEventListener('resize', fetchRecommendedGames);
 
     function toggleFullscreen() {
         const iframe = document.getElementById('game-iframe');
