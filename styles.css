@@ -61,7 +61,6 @@ h2 {
 	color: #eaeaea
 }
 
-.backup-section button,
 .btn-custom {
 	background-color: #b7e1c0;
 	color: #1a1a1a;
@@ -79,7 +78,6 @@ h2 {
 	text-align: center
 }
 
-.backup-section button:hover,
 .btn-custom:hover {
 	background-color: #a0d1a4;
 	transform: translateY(-2px)
@@ -227,26 +225,6 @@ h2 {
 
 .modal-content ul li {
 	margin: 10px 0
-}
-
-.backup-section {
-	background-color: #3e3e3e;
-	padding: 40px 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, .3);
-	margin: 20px 0
-}
-
-.backup-section h2 {
-	color: #b7e1c0;
-	font-size: 2rem;
-	margin-bottom: 20px
-}
-
-.backup-section p {
-	color: #eaeaea;
-	font-size: 1.2rem;
-	margin-bottom: 20px
 }
 
 .modal-content ul li a {
