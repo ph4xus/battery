@@ -49,27 +49,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function searchgxmes() {
         const query = searchInput.value.toLowerCase();
-        const gxmeGrid = document.querySelector('.gxme-grid');
+        const gxmeGrid = document.querySelectorAll('.gxme-grid a'); 
 
         loadingText.style.display = 'block';
 
-        gxmeGrid.forEach(section => {
-            const links = section.querySelectorAll('a');
-            
-            links.forEach(link => {
-                const h3 = link.querySelector('h3');
+        gxmeGrid.forEach(link => { 
+            const h3 = link.querySelector('h3');
 
-                if (h3 && h3.textContent.includes(searchTerm)) {
-                    link.style.display = '';
-                } else {
-                    link.style.display = 'none';
-                }
-            });
+            if (h3 && h3.textContent.toLowerCase().includes(query)) { 
+                link.style.display = '';
+            } else {
+                link.style.display = 'none';
+            }
         });
-    }
-        
-        loadingText.style.display = 'none';
 
+        loadingText.style.display = 'none';
     }
 
     searchInput.addEventListener('input', searchgxmes);
@@ -104,12 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function randombutton() {
-const links = document.querySelectorAll('section.gxme-grid a');
-if (links.length === 0) {
-    alert("No gxmes available to play.");
-    return;
-}
-const randomIndex = Math.floor(Math.random() * links.length);
-const randomLink = links[randomIndex];
-randomLink.click();
+    const links = document.querySelectorAll('section.gxme-grid a');
+    if (links.length === 0) {
+        alert("No gxmes available to play.");
+        return;
+    }
+    const randomIndex = Math.floor(Math.random() * links.length);
+    const randomLink = links[randomIndex];
+    randomLink.click();
 }
