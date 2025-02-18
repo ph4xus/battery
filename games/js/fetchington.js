@@ -176,6 +176,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 text-align: center;
                 transition: transform 0.3s ease;
             }
+            .game-card a {
+                text-decoration: none;
+            }
 
             .game-card:hover {
                 transform: scale(1.05);
