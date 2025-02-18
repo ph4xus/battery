@@ -331,6 +331,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Re-render cards on window resize
     window.addEventListener('resize', fetchRecommendedGames);
 
+
+
+    fetchRecommendedGames();
+});
     function toggleFullscreen() {
         const iframe = document.getElementById('game-iframe');
         if (iframe.requestFullscreen) {
@@ -343,6 +347,3 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.msRequestFullscreen();
         }
     }
-
-    fetchRecommendedGames();
-});
