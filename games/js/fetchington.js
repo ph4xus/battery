@@ -187,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .game-card img {
                 width: 100%;
                 object-fit: cover;
+                height:200px;
             }
 
             .game-card p {
