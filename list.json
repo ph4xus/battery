@@ -1,6 +1,6 @@
 [
     {
-        "name": "Stickman hook",
+        "name": "Stickman Hook",
         "imgsrc": "/assets/img/stickman.jpeg",
         "linksrc": "/Vafor_IT/hookingman/",
         "foldername": "stickman-hook"
@@ -36,7 +36,7 @@
         "foldername": "agar.io"
     },
     {
-        "name": "Smash karts",
+        "name": "Smash Karts",
         "imgsrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3/9c9e529b14731be871b07b89660bbc2a.png",
         "linksrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3",
         "foldername": "smash-karts"
@@ -48,10 +48,10 @@
         "foldername": "slope"
     },
     {
-        "name": "yohoho",
+        "name": "Yohoho.io",
         "imgsrc": "/assets/img/pirates2.jfif",
         "linksrc": "/Vafor_IT/pirates",
-        "foldername": "yohoho"
+        "foldername": "yohoho.io"
     },
     {
         "name": "Motor X3m",
@@ -79,14 +79,14 @@
     },
     {
         "name": "Sling Drift",
-        "imgsrc": "/Vafor_IT/badtaxidriver/thumbnail.jpg",
+        "imgsrc": "/assets/img/slingdrift.png",
         "linksrc": "/Vafor_IT/badtaxidriver",
         "foldername": "sling-drift"
     },
     {
         "name": "Drift Boss",
         "imgsrc": "/assets/img/drift.jpeg",
-        "linksrc": "/Vafor_IT/germany%20drift/DriftBoss-gh-pages/",
+        "linksrc": "/Vafor_IT/germany-drift",
         "foldername": "drift-boss"
     },
     {
@@ -96,19 +96,19 @@
         "foldername": "bank-robbery"
     },
     {
-        "name": "ovo",
+        "name": "Ovo",
         "imgsrc": "/assets/img/ovo.png",
         "linksrc": "/Vafor_IT/ovo",
         "foldername": "ovo"
     },
     {
-        "name": "tiny fishing",
+        "name": "Tiny Fishing",
         "imgsrc": "/assets/img/tinyfishing.png",
         "linksrc": "/Vafor_IT/tiny-fishing",
         "foldername": "tiny-fishing"
     },
     {
-        "name": "vex 6",
+        "name": "Vex 6",
         "imgsrc": "/assets/img/vex6.png",
         "linksrc": "/Vafor_IT/vex6",
         "foldername": "vex-6"
@@ -120,13 +120,13 @@
         "foldername": "basketball-stars"
     },
     {
-        "name": "sm64",
+        "name": "Super Mario 64",
         "imgsrc": "/assets/img/sm64.jpg",
         "linksrc": "/Vafor_IT/sm64",
-        "foldername": "sm64"
+        "foldername": "super-mario-64"
     },
     {
-        "name": "60 second burger run",
+        "name": "60 Second Burger Run",
         "imgsrc": "/assets/img/burger.png",
         "linksrc": "/Vafor_IT/60min/index.html",
         "foldername": "60-second-burger-run"
@@ -138,13 +138,13 @@
         "foldername": "paper.io-2"
     },
     {
-        "name": "Cat mario",
+        "name": "Cat Mario",
         "imgsrc": "/assets/img/cat.png",
         "linksrc": "/Vafor_IT/cat-mario/index.html",
         "foldername": "cat-mario"
     },
     {
-        "name": "Idle breakout",
+        "name": "Idle Breakout",
         "imgsrc": "/assets/img/idle.png",
         "linksrc": "/Vafor_IT/idle-breakout/",
         "foldername": "idle-breakout"
@@ -174,7 +174,7 @@
         "foldername": "pixel-gun-2"
     },
     {
-        "name": "Drive mad",
+        "name": "Drive Mad",
         "imgsrc": "/assets/img/drivemad.jpeg",
         "linksrc": "/Vafor_IT/drive-mad/",
         "foldername": "drive-mad"
@@ -186,7 +186,7 @@
         "foldername": "cluster-rush"
     },
     {
-        "name": "10 minutes till dawn",
+        "name": "10 Minutes Till Dawn",
         "imgsrc": "/assets/img/20min.jfif",
         "linksrc": "/Vafor_IT/10-minutes-till-dawn/",
         "foldername": "10-minutes-till-dawn"
@@ -198,13 +198,13 @@
         "foldername": "google-snake"
     },
     {
-        "name": "Gun mayhem 2",
+        "name": "Gun Mayhem 2",
         "imgsrc": "/assets/img/gunmayhem.jpeg",
         "linksrc": "/Vafor_IT/gunmayhem2/",
         "foldername": "gun-mayhem-2"
     },
     {
-        "name": "Generic fishing",
+        "name": "Generic Fishing",
         "imgsrc": "/assets/img/fishing.png",
         "linksrc": "/Vafor_IT/fishing_game/",
         "foldername": "generic-fishing"
@@ -216,52 +216,52 @@
         "foldername": "fnaf"
     },
     {
-        "name": "Ninja vs evilcorp",
+        "name": "Ninja vs Evilcorp",
         "imgsrc": "/assets/img/ninja.png",
         "linksrc": "/Vafor_IT/ninja.html",
         "foldername": "ninja-vs-evilcorp"
     },
     {
-        "name": "CSGO clicker",
+        "name": "CSGO Clicker",
         "imgsrc": "/assets/img/csgo.png",
         "linksrc": "/Vafor_IT/csgo_clicker/",
         "foldername": "csgo-clicker"
     },
     {
-        "name": "madalin stunt cars",
+        "name": "Madalin Stunt Cars",
         "imgsrc": "/assets/img/mcm.png",
-        "linksrc": "/Vafor_IT/mcm-files/mcm-files/index.html",
+        "linksrc": "/Vafor_IT/mcm-files/",
         "foldername": "madalin-stunt-cars"
     },
     {
-        "name": "bitlife",
+        "name": "Bitlife",
         "imgsrc": "/assets/img/bitlife.jpeg",
         "linksrc": "/Vafor_IT/bitlife/",
         "foldername": "bitlife"
     },
     {
-        "name": "snowrider",
+        "name": "Snowrider",
         "imgsrc": "/assets/img/snow.png",
         "linksrc": "/Vafor_IT/Snow-Rider3D/index.html",
         "foldername": "snowrider"
     },
     {
-        "name": "Jetpack joyride",
+        "name": "Jetpack Joyride",
         "imgsrc": "/assets/img/jet.png",
         "linksrc": "/Vafor_IT/jetpack-joyride/",
         "foldername": "jetpack-joyride"
     },
     {
-        "name": "Impossible quiz",
+        "name": "Impossible Quiz",
         "imgsrc": "/assets/img/averageschool.png",
         "linksrc": "/Vafor_IT/impossiblequiz/",
         "foldername": "impossible-quiz"
     },
     {
-        "name": "Pappas pizzaria",
+        "name": "Pappas Pizzaria",
         "imgsrc": "/Vafor_IT/papaspizzaria/papaspizzaria.jpg",
         "linksrc": "/Vafor_IT/papaspizzaria/",
-        "foldername": "pappas-pizzaria"
+        "foldername": "pappas-pizzeria"
     },
     {
         "name": "Pappas Freezeria",
@@ -276,43 +276,43 @@
         "foldername": "pappas-pancakearia"
     },
     {
-        "name": "World hardest gm 2",
+        "name": "World Hardest gm 2",
         "imgsrc": "/Vafor_IT/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
         "linksrc": "/Vafor_IT/worlds-hardest-game-2/index.html",
-        "foldername": "world-hardest-gm-2"
+        "foldername": "worlds-hardest-gm-2"
     },
     {
-        "name": "Rooftop sniper",
+        "name": "Rooftop Snipers",
         "imgsrc": "/assets/img/rooft.png",
         "linksrc": "/Vafor_IT/rooftop-snipers/",
-        "foldername": "rooftop-sniper"
+        "foldername": "rooftop-snipers"
     },
     {
-        "name": "stack",
+        "name": "Stack",
         "imgsrc": "/Vafor_IT/stack/stack.png",
         "linksrc": "/Vafor_IT/stack/",
         "foldername": "stack"
     },
     {
-        "name": "Tanuki sunset",
+        "name": "Tanuki Sunset",
         "imgsrc": "/Vafor_IT/tanuki-sunset/img/logo.png",
         "linksrc": "/Vafor_IT/tanuki-sunset/",
         "foldername": "tanuki-sunset"
     },
     {
-        "name": "Soccer random",
+        "name": "Soccer Random",
         "imgsrc": "/Vafor_IT/soccer-random/splash.png",
         "linksrc": "/Vafor_IT/soccer-random/",
         "foldername": "soccer-random"
     },
     {
-        "name": "Subway surfers",
+        "name": "Subway Surfers",
         "imgsrc": "/Vafor_IT/subway-surfers/img/splash.jpg",
         "linksrc": "/Vafor_IT/subway-surfers/",
         "foldername": "subway-surfers"
     },
     {
-        "name": "Learn to fly",
+        "name": "Learn to Fly",
         "imgsrc": "/assets/img/learntofly.jpeg",
         "linksrc": "/Vafor_IT/learntofly/",
         "foldername": "learn-to-fly"
@@ -330,16 +330,16 @@
         "foldername": "hilldraw"
     },
     {
-        "name": "Snoball io",
+        "name": "Snowball io",
         "imgsrc": "/assets/img/snowgamingisdead.jpg",
         "linksrc": "/Vafor_IT/snowballio/",
-        "foldername": "snoball-io"
+        "foldername": "snowball-io"
     },
     {
         "name": "Fireboy and water girl",
         "imgsrc": "/assets/img/fireandwater.jpg",
         "linksrc": "/Vafor_IT/fireboywatergirlforesttemple/",
-        "foldername": "fireboy-and-water-girl"
+        "foldername": "fireboy-and-watergirl"
     },
     {
         "name": "Pixel Speedrun",
@@ -348,43 +348,43 @@
         "foldername": "pixel-speedrun"
     },
     {
-        "name": "A dance of fire and ice",
+        "name": "A Dance of Fire and Ice",
         "imgsrc": "/Vafor_IT/dances/splash.png",
         "linksrc": "/Vafor_IT/dances/",
         "foldername": "a-dance-of-fire-and-ice"
     },
     {
-        "name": "giraffes volleyball",
+        "name": "Giraffes Volleyball",
         "imgsrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f/favico.png",
         "linksrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f",
         "foldername": "giraffes-volleyball"
     },
     {
-        "name": "Deepest sword",
+        "name": "Deepest Sword",
         "imgsrc": "/assets/img/deepest-sword.png",
         "linksrc": "/Vafor_IT/deepswordayo/",
         "foldername": "deepest-sword"
     },
     {
-        "name": "Bottle flip 3d",
+        "name": "Bottle Flip 3d",
         "imgsrc": "/assets/img/sddefault.jpg",
         "linksrc": "/Vafor_IT/bottleflippingdiedin20126/",
         "foldername": "bottle-flip-3d"
     },
     {
-        "name": "Choppy orc",
+        "name": "Choppy Orc",
         "imgsrc": "/assets/img/thumb_2.jpg",
         "linksrc": "/Vafor_IT/ChoppyOrc",
         "foldername": "choppy-orc"
     },
     {
-        "name": "Precision client 1.5",
+        "name": "Minecraft (1.5)",
         "imgsrc": "/assets/img/imgoingtoslapmartin.png",
         "linksrc": "/Vafor_IT/precision-client/precision-client-v34.6/public/",
-        "foldername": "precision-client-1.5"
+        "foldername": "minecraft"
     },
     {
-        "name": "Funny shooter",
+        "name": "Funny Shooter",
         "imgsrc": "/assets/img/funnyshooter.webp",
         "linksrc": "/Vafor_IT/VAzg42bVjmum4loaFEocbmzmkIYQggJd/",
         "foldername": "funny-shooter"
@@ -402,7 +402,7 @@
         "foldername": "tomb-of-the-mask"
     },
     {
-        "name": "Doge miner",
+        "name": "Doge Miner",
         "imgsrc": "/Vafor_IT/doge/img/dogeminer_300x300.png",
         "linksrc": "/Vafor_IT/doge/",
         "foldername": "doge-miner"
@@ -414,7 +414,7 @@
         "foldername": "run-3"
     },
     {
-        "name": "Sausage flip",
+        "name": "Sausage Flip",
         "imgsrc": "/assets/img/sausage.jpg",
         "linksrc": "/Vafor_IT/sausage/",
         "foldername": "sausage-flip"
@@ -426,7 +426,7 @@
         "foldername": "sandstrike.io"
     },
     {
-        "name": "Color tunnel",
+        "name": "Color Tunnel",
         "imgsrc": "/Vafor_IT/colourtunnel/TemplateData/logo.png",
         "linksrc": "/Vafor_IT/colourtunnel",
         "foldername": "color-tunnel"
@@ -438,7 +438,7 @@
         "foldername": "polytrack"
     },
     {
-        "name": "Friday night funkin",
+        "name": "Friday Night Funkin",
         "imgsrc": "/Vafor_IT/fnfweek7/friday-night-funkin.png",
         "linksrc": "/Vafor_IT/fnfweek7/",
         "foldername": "friday-night-funkin"
@@ -454,5 +454,17 @@
         "imgsrc": "/Vafor_IT/fruitninja/FruitNinjaTeaser.jpg",
         "linksrc": "/Vafor_IT/fruitninja/",
         "foldername": "fruit-ninja"
+    },
+    {
+        "name": "Rocket Pult",
+        "imgsrc": "/assets/img/rocketpult.png",
+        "linksrc": "/Vafor_IT/rocketpult/",
+        "foldername": "rocket-pult"
+    },
+    {
+        "name": "Block Blast",
+        "imgsrc": "/assets/img/blockblast.jpeg",
+        "linksrc": "/Vafor_IT/blockblast/",
+        "foldername": "block-blast"
     }
 ]
