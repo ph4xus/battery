@@ -294,27 +294,24 @@ document.addEventListener("DOMContentLoaded", function () {
         </footer>
     `;
 
-    // Function to fetch and display recommended games
     async function fetchRecommendedGames() {
         try {
             const response = await fetch('/list.json');
             const data = await response.json();
             const recommendedGamesContainer = document.getElementById('recommendedGames');
-            recommendedGamesContainer.innerHTML = ''; // Clear previous content
+            recommendedGamesContainer.innerHTML = ''; 
 
-            // Shuffle the games array and pick the first 5
             const shuffledGames = data.sort(() => 0.5 - Math.random()).slice(0, 5);
 
             shuffledGames.forEach(game => {
                 const gameCard = document.createElement('div');
                 gameCard.className = 'game-card';
                 gameCard.innerHTML = `
+                    <a href="/gxmes/${game.foldername}">
                     <img src="${game.imgsrc}" alt="${game.name}">
                     <p>${game.name}</p>
+                    </a>
                 `;
-                gameCard.addEventListener('click', () => {
-                    fetchData(data.indexOf(game)); // Load the selected game
-                });
                 recommendedGamesContainer.appendChild(gameCard);
             });
         } catch (error) {
