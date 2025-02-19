@@ -100,12 +100,14 @@ h2 {
 }
 
 .gxme-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	gap: 15px;
-	padding: 40px 20px;
-	background-color: #3e3e3e;
-	flex-grow: 1
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 40px 20px;
+    background-color: #3e3e3e;
+    flex-grow: 1;
+    height: 70vh; /* Fixed height */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
 }
 
 .gxme-card {
@@ -364,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const loadingText = document.getElementById('loadingText');
     const gxmeGrid = document.querySelector('.gxme-grid');
 
-    fetch('/list.json')
+    fetch('../list.json')
         .then(response => response.json())
         .then(data => {
             // Split the data into two groups
@@ -418,6 +420,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     tab2.classList.add('active');
                     tab1.classList.remove('active');
                 }
+
+                // Scroll to the top of the grid when switching tabs
+                gxmeGrid.scrollTo(0, 0);
             };
 
             loadingText.style.display = 'none';
