@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 gxmeCard.style.cursor = 'pointer';
 
                 let img = document.createElement('img');
-                img.src = gxme.imgsrc; 
+                img.src = "https://ph4xus.github.io" + gxme.imgsrc; 
                 img.alt = gxme.name;
                 img.style.width = '100px';
                 img.style.height = '100px';
