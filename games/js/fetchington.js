@@ -42,13 +42,11 @@ async function fetchData(index) {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-    // Fetch Font Awesome CSS
     const link2 = document.createElement("link");
     link2.rel = "stylesheet";
     link2.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css";
     document.head.appendChild(link2);
 
-    // Create the HTML structure
     const bodyTag = document.body;
     bodyTag.innerHTML = `
         <style>
@@ -164,8 +162,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             .games-list {
                 display: flex;
-                gap: 15px;
-                flex-wrap: wrap;
+                justify-content: space-between; 
+                gap: 15px; 
+                flex-wrap: wrap; 
             }
 
             .game-card {
@@ -175,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 width: 220px;
                 text-align: center;
                 transition: transform 0.3s ease;
+                flex: 0 0 auto;
             }
             .game-card a {
                 text-decoration: none;
@@ -304,12 +304,10 @@ document.addEventListener("DOMContentLoaded", function () {
             const recommendedGamesContainer = document.getElementById('recommendedGames');
             recommendedGamesContainer.innerHTML = ''; 
 
-            // Calculate the number of cards that fit in the available space
-            const cardWidth = 220; // Width of each card in pixels
+            const cardWidth = 220; 
             const containerWidth = recommendedGamesContainer.clientWidth;
             const cardsPerRow = Math.floor(containerWidth / cardWidth);
 
-            // Shuffle the games and slice based on the calculated number of cards
             const shuffledGames = data.sort(() => 0.5 - Math.random()).slice(0, cardsPerRow);
 
             shuffledGames.forEach(game => {
@@ -328,7 +326,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Re-render cards on window resize
     window.addEventListener('resize', fetchRecommendedGames);
 
 
