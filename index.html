@@ -1,502 +1,212 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gxmes - maxwellstevenson.com</title>
-    <meta name="keywords" content="maxwellstevenson.com, vafor, vafor IT, Vafor IT work,  buildnow.gg, 1v1.lol ,funnyshooter 2 ,smash karts ,unblocked gxmes, gxmes, gxmes hub, gxmes online, gxmes space, gxmes spxce, gxmes space">
-    <meta name="description" content="Play over 70+ gxmes on maxwellstevenson.com">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>Games - Vafor IT</title>
+    <meta name="description" content="Explore a wide collection of fun and exciting games.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<style>
-            .footer a,
-.modal-content ul li a,
-.navbar a {
-	text-decoration: none;
-	font-weight: 600
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Heebo", sans-serif;
+        }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Heebo, sans-serif
-}
+        body {
+            background-color: #2d2d2d;
+            color: #eaeaea;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-body,
-html {
-	height: 100%;
-	margin: 0;
-	display: flex;
-	flex-direction: column
-}
+        .navbar {
+            background-color: #3e3e3e;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 82px;
+        }
 
-body {
-	background-color: #2d2d2d;
-	color: #eaeaea
-}
+        h1 {
+            color: #a0d1a4;
+        }
 
-.navbar a:hover,
-h1,
-h2 {
-	color: #b7e1c0
-}
+        a {
+            color: #cfcfcf;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
 
-.navbar {
-	background-color: #3e3e3e;
-	padding: 15px
-}
+        a:hover {
+            color: #a0d1a4;
+        }
 
-.navbar a {
-	color: #eaeaea;
-	padding: 10px 20px;
-	font-size: 1.1rem;
-	transition: color .3s
-}
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+        }
 
-.hero-section {
-	background-color: #1a1a1a;
-	text-align: center;
-	padding: 60px 20px
-}
+        .hero-section {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
 
-.hero-section h1 {
-	color: #b7e1c0;
-	font-size: 3.5rem;
-	margin-bottom: 20px
-}
+        .hero-section h1 {
+            font-size: 4.5rem;
+            margin-bottom: 20px;
+            color: #a0d1a4;
+            animation: fadeInDown 1.5s ease-out;
+            position: relative;
+            z-index: 1;
+        }
 
-.hero-section p {
-	font-size: 1.25rem;
-	margin-bottom: 30px;
-	color: #eaeaea
-}
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #cfcfcf;
+            animation: fadeInUp 1.5s ease-out;
+            position: relative;
+            z-index: 1;
+        }
 
-.backup-section button,
-.btn-custom {
-	background-color: #b7e1c0;
-	color: #1a1a1a;
-	border: none;
-	border-radius: 5px;
-	padding: 10px 20px;
-	font-size: 1.2rem;
-	cursor: pointer;
-	transition: background-color .3s, transform .2s
-}
+        .btn-custom {
+            background-color: #a0d1a4;
+            color: #1a1a1a;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            animation: fadeIn 2s ease-out;
+            position: relative;
+            z-index: 1;
+        }
 
-.footer,
-.gxme-card {
-	color: #eaeaea;
-	text-align: center
-}
+        .btn-custom:hover {
+            background-color: #8ec295;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.backup-section button:hover,
-.btn-custom:hover {
-	background-color: #a0d1a4;
-	transform: translateY(-2px)
-}
+        .main-content {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-.gxme-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 15px;
-    padding: 40px 20px;
-    background-color: #3e3e3e;
-    flex-grow: 1;
-    height: 70vh; /* Fixed height */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-}
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
-.gxme-card {
-	background-color: #444;
-	border-radius: 10px;
-	padding: 15px;
-	height: 150px;
-	transition: transform .2s, box-shadow .3s
-}
+        .game-card {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            color: #eaeaea;
+            transition: transform 0.2s, box-shadow 0.3s;
+        }
 
-.gxme-card img {
-	max-width: 100%;
-	height: auto;
-	border-radius: 10px;
-	margin-bottom: 10px
-}
+        .game-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-.gxme-card:hover {
-	transform: scale(1.05);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, .4)
-}
+        .game-card h3 {
+            font-size: 1.2rem;
+            color: #a0d1a4;
+            margin-top: 10px;
+        }
 
-.gxme-card h3 {
-	font-size: 1.2rem;
-	color: #b7e1c0;
-	margin-top: 10px
-}
+        .game-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
 
-.footer {
-	background-color: #1a1a1a;
-	padding: 30px 20px;
-	font-size: .9rem;
-	flex-shrink: 0
-}
+        .footer {
+            background-color: #3e3e3e;
+            padding: 15px;
+            text-align: center;
+            flex-shrink: 0;
+        }
 
-.footer a {
-	color: #b7e1c0
-}
-
-.footer a:hover,
-.modal-content ul li a:hover {
-	color: #a0d1a4
-}
-
-.search-bar {
-	display: flex;
-	align-items: center;
-	background-color: #444;
-	padding: .5rem 1rem;
-	border-radius: 5px
-}
-
-.search-bar input {
-	background: 0 0;
-	border: none;
-	outline: 0;
-	color: #eaeaea;
-	padding: .5rem;
-	font-size: 1rem;
-	width: 200px
-}
-
-.search-bar button {
-	background-color: #b7e1c0;
-	color: #1a1a1a;
-	border: none;
-	border-radius: 3px;
-	padding: .5rem 1rem;
-	cursor: pointer;
-	transition: background-color .3s
-}
-
-.search-bar button:hover {
-	background-color: #a0d1a4
-}
-
-.loading-text {
-	text-align: center;
-	font-size: 1.5rem;
-	color: #fff;
-	margin-top: 20px
-}
-
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgba(0, 0, 0, .7);
-	padding-top: 60px
-}
-
-.modal-content {
-	background-color: #2d2d2d;
-	margin: 5% auto;
-	padding: 20px;
-	border: none;
-	border-radius: 10px;
-	width: 80%;
-	max-width: 600px;
-	color: #eaeaea;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, .3)
-}
-
-.close {
-	color: #eaeaea;
-	float: right;
-	font-size: 28px;
-	font-weight: 700;
-	cursor: pointer;
-	transition: color .3s
-}
-
-.close:focus,
-.close:hover {
-	color: #b7e1c0;
-	text-decoration: none
-}
-
-.modal-content h2 {
-	color: #b7e1c0;
-	margin-bottom: 20px
-}
-
-.modal-content ul {
-	list-style-type: none;
-	padding: 0
-}
-
-.modal-content ul li {
-	margin: 10px 0
-}
-
-.backup-section {
-	background-color: #3e3e3e;
-	padding: 40px 20px;
-	border-radius: 10px;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, .3);
-	margin: 20px 0
-}
-
-.backup-section h2 {
-	color: #b7e1c0;
-	font-size: 2rem;
-	margin-bottom: 20px
-}
-
-.backup-section p {
-	color: #eaeaea;
-	font-size: 1.2rem;
-	margin-bottom: 20px
-}
-
-.modal-content ul li a {
-	color: #b7e1c0;
-	transition: color .3s
-}
-
-.current::before {
-	content: "current: ";
-	color: #fff;
-	font-weight: 700
-}
-	/* Add this to your existing CSS */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px;
-    background-color: #3e3e3e;
-    bottom: 0;
-    z-index: 10;
-}
-
-.tab-button {
-    background-color: #444;
-    color: #eaeaea;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.tab-button.active {
-    background-color: #b7e1c0;
-    color: #1a1a1a;
-}
-
-.tab-button:hover {
-    background-color: #a0d1a4;
-    transform: translateY(-2px);
-}
-</style>
+        .footer p {
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <script>function search(alert("It auto searches."));</script>
     <nav class="navbar">
-        <a href="/gxmes">Gxmes</a>
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Search gxmes...">
-            <button onclick="search();">Search</button>
+        <a href="/">Vafor IT</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#about">About</a>
         </div>
     </nav>
+
     <section class="hero-section">
-        <h1>Vafor IT</h1>
-        <p>Explore over 70+ exciting gxmes from all genres</p>
-        <button class="btn-custom" onclick="randombutton()">Start Playing</button>
-    </section>
-    <div class="loading-text" id="loadingText">Loading...</div>
-
-    <section class="gxme-grid">
-        <!-- gxme cards -->
-    </section>
-	<div class="tab-buttons">
-    <button id="tab1" class="tab-button active" onclick="showTab(1)">1</button>
-    <button id="tab2" class="tab-button" onclick="showTab(2)">2</button>
-</div>
-
-    <section class="backup-section">
-        <h2>Important Links</h2>
-        <p>Make sure to have backups in case any of these links get blocked. Click the button below to see the backup links.</p>
-        <button id="openModal">View Backup Links</button>
+        <h1>Vafor IT Games</h1>
+        <p>Explore a wide collection of fun and exciting games.</p>
     </section>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Backup Links</h2>
-            <ul>
-                <li id="link1"><a href="https://ph4xus.github.io">ph4xus.github.io</a></li>
-                <li id="link2"><a href="https://phexus.bitbucket.io">phexus.bitbucket.io</a></li>
-                <li id="link3"><a href="https://maxwellstevenson.com">maxwellstevenson.com</a></li>
-                <li id="link4"><a href="https://class44x.github.io">class44x.github.io</a></li>
-            </ul>
+    <section class="main-content">
+        <h2>All Games</h2>
+        <div class="game-grid" id="gameGrid">
+            <!-- Games will be dynamically loaded here -->
         </div>
-    </div>
+    </section>
 
     <footer class="footer">
-        <p>© 2025 maxwellstevenson.com. All Rights Reserved.</p>
-        <p>Open an issue: <a href="https://github.com/phexus23/phexus23.github.io">Official repository</a></p>
+        <p>© 2025 Vafor IT. All Rights Reserved.</p>
     </footer>
-	<script>
-		function getParentFolder() {
-    return window.location.origin; 
-}
 
-let link2 = getParentFolder(); 
+    <script>
+        // Fetch games from /list.json and display them
+        async function loadGames() {
+            try {
+                const response = await fetch('/list.json');
+                const games = await response.json();
+                const gameGrid = document.getElementById('gameGrid');
 
-document.addEventListener('DOMContentLoaded', function () {
-    const loadingText = document.getElementById('loadingText');
-    const gxmeGrid = document.querySelector('.gxme-grid');
+                games.forEach(game => {
+                    const gameCard = document.createElement('a');
+                    gameCard.href = `/gxmes/${game.foldername}`;
+                    gameCard.className = 'game-card';
 
-    fetch('../list.json')
-        .then(response => response.json())
-        .then(data => {
-            // Split the data into two groups
-            const first50 = data.slice(0, 50);
-            const remaining = data.slice(50);
+                    const gameImage = document.createElement('img');
+                    gameImage.src = game.imgsrc;
+                    gameImage.alt = game.name;
 
-            // Function to create cards
-            function createCards(cardsData, container) {
-                container.innerHTML = ''; // Clear existing cards
-                cardsData.forEach(gxme => {
-                    let gxmeLink = document.createElement('a');
-                    gxmeLink.href = link2 + "/gxmes/" + gxme.foldername;
-                    gxmeLink.target = '_self';
-                    gxmeLink.style.textDecoration = 'none';
-                    gxmeLink.style.color = 'inherit';
+                    const gameTitle = document.createElement('h3');
+                    gameTitle.textContent = game.name;
 
-                    let gxmeCard = document.createElement('div');
-                    gxmeCard.classList.add('gxme-card');
-                    gxmeCard.style.cursor = 'pointer';
-
-                    let img = document.createElement('img');
-                    img.src = "https://ph4xus.github.io" + gxme.imgsrc;
-                    img.alt = gxme.name;
-                    img.style.width = '100px';
-                    img.style.height = '100px';
-
-                    let h3 = document.createElement('h3');
-                    h3.textContent = gxme.name;
-
-                    gxmeCard.appendChild(img);
-                    gxmeCard.appendChild(h3);
-                    gxmeLink.appendChild(gxmeCard);
-                    container.appendChild(gxmeLink);
+                    gameCard.appendChild(gameImage);
+                    gameCard.appendChild(gameTitle);
+                    gameGrid.appendChild(gameCard);
                 });
+            } catch (error) {
+                console.error('Error loading games:', error);
             }
-
-            // Initial load: show first 50 cards
-            createCards(first50, gxmeGrid);
-
-            // Function to switch tabs
-            window.showTab = function (tabNumber) {
-                const tab1 = document.getElementById('tab1');
-                const tab2 = document.getElementById('tab2');
-
-                if (tabNumber === 1) {
-                    createCards(first50, gxmeGrid);
-                    tab1.classList.add('active');
-                    tab2.classList.remove('active');
-                } else if (tabNumber === 2) {
-                    createCards(remaining, gxmeGrid);
-                    tab2.classList.add('active');
-                    tab1.classList.remove('active');
-                }
-
-                // Scroll to the top of the grid when switching tabs
-                gxmeGrid.scrollTo(0, 0);
-            };
-
-            loadingText.style.display = 'none';
-        })
-        .catch(error => {
-            console.error('Error loading the list.json:', error);
-            loadingText.textContent = 'Failed to load gxmes. Please try again later.';
-        });
-
-    // Search functionality (unchanged)
-    const searchInput = document.getElementById('search');
-
-    function searchgxmes() {
-        const query = searchInput.value.toLowerCase();
-        const gxmeGrid = document.querySelectorAll('.gxme-grid a');
-
-        loadingText.style.display = 'block';
-
-        gxmeGrid.forEach(link => {
-            const h3 = link.querySelector('h3');
-
-            if (h3 && h3.textContent.toLowerCase().includes(query)) {
-                link.style.display = '';
-            } else {
-                link.style.display = 'none';
-            }
-        });
-
-        loadingText.style.display = 'none';
-    }
-
-    searchInput.addEventListener('input', searchgxmes);
-
-    // Modal functionality (unchanged)
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("openModal");
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-        modal.style.display = "block";
-        var currentUrl = window.location.href;
-        if (currentUrl.includes("ph4xus.github.io")) {
-            document.getElementById("link1").classList.add("current");
-        } else if (currentUrl.includes("phexus.bitbucket.io")) {
-            document.getElementById("link2").classList.add("current");
-        } else if (currentUrl.includes("maxwellstevenson.com")) {
-            document.getElementById("link3").classList.add("current");
-        } else if (currentUrl.includes("class44x.github.io")) {
-            document.getElementById("link4").classList.add("current");
         }
-    };
 
-    span.onclick = function () {
-        modal.style.display = "none";
-    };
-
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    };
-});
-
-// Random button functionality (unchanged)
-function randombutton() {
-    const links = document.querySelectorAll('section.gxme-grid a');
-    if (links.length === 0) {
-        alert("No gxmes available to play.");
-        return;
-    }
-    const randomIndex = Math.floor(Math.random() * links.length);
-    const randomLink = links[randomIndex];
-    randomLink.click();
-}
-	</script>
+        // Load games when the page loads
+        window.onload = loadGames;
+    </script>
 </body>
 </html>
