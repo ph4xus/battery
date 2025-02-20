@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Site</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add FontAwesome for the favorite icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
-        <!-- Side Navigation -->
         <nav class="side-nav">
             <h2>Categories</h2>
             <ul>
@@ -17,12 +18,13 @@
                 <li><a href="#" data-category="puzzle">Puzzle</a></li>
                 <li><a href="#" data-category="adventure">Adventure</a></li>
             </ul>
-            <h2>Favorites</h2>
-            <div id="favorites-section"></div>
         </nav>
 
-        <!-- Main Content -->
         <main>
+            <section id="Favorites" style="display: none;">
+                <h2>Favorites</h2>
+                <div class="games-grid" id="favorites"></div>
+            </section>
             <section id="top-10">
                 <h2>Top 10 Games</h2>
                 <div class="games-grid" id="top-10-games"></div>

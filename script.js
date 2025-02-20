@@ -8,13 +8,64 @@ async function fetchGames() {
 // Render games in a section
 function renderGames(games, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = games.map(game => `
-        <div class="game-card">
-            <img src="https://ph4xus.github.io/${game.imgsrc}" alt="${game.name}">
-            <h3>${game.name}</h3>
-            <a href="/gxmes/${game.foldername}">Play Now</a>
-        </div>
-    `).join('');
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    container.innerHTML = games.map(game => {
+        const isFavorite = favorites.some(fav => fav.name === game.name);
+        return `
+            <div class="game-card">
+                <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
+                    <i class="fas fa-star"></i>
+                </button>
+                <img src="https://ph4xus.github.io/${game.imgsrc}" alt="${game.name}">
+                <h3>${game.name}</h3>
+                <a href="/gxmes/${game.foldername}">Play Now</a>
+            </div>
+        `;
+    }).join('');
+
+    // Add event listeners to favorite buttons
+    container.querySelectorAll('.favorite-btn').forEach(button => {
+        button.addEventListener('click', () => toggleFavorite(button));
+    });
+}
+
+// Toggle a game as favorite
+function toggleFavorite(button) {
+    const game = JSON.parse(button.dataset.game);
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const isFavorite = favorites.some(fav => fav.name === game.name);
+    if (isFavorite) {
+        // Remove from favorites
+        favorites = favorites.filter(fav => fav.name !== game.name);
+        button.classList.remove('active');
+    } else {
+        // Add to favorites
+        favorites.push(game);
+        button.classList.add('active');
+    }
+
+    // Update local storage
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    loadFavorites(); // Refresh the favorites section
+}
+
+// Load favorite games from local storage
+function loadFavorites() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesSection = document.getElementById('Favorites');
+    const favoritesContainer = document.getElementById('favorites');
+
+    if (favorites.length > 0) {
+        // Display the favorites section
+        favoritesSection.style.display = 'block';
+        // Render favorite games
+        renderGames(favorites, 'favorites');
+    } else {
+        // Hide the favorites section if there are no favorites
+        favoritesSection.style.display = 'none';
+    }
 }
 
 // Load top 10 games
@@ -34,6 +85,7 @@ async function loadAllGames() {
 async function init() {
     await loadTop10();
     await loadAllGames();
+    loadFavorites();
 }
 
 // Event listeners for side navigation
