@@ -10,7 +10,7 @@ function renderGames(games, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = games.map(game => `
         <div class="game-card">
-            <img src="${game.imgsrc}" alt="${game.name}">
+            <img src="https://ph4xus.github.io/${game.imgsrc}" alt="${game.name}">
             <h3>${game.name}</h3>
             <a href="/gxmes/${game.foldername}">Play Now</a>
         </div>
