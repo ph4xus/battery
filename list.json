@@ -3,127 +3,148 @@
         "name": "Stickman Hook",
         "imgsrc": "/assets/img/stickman.jpeg",
         "linksrc": "/Vafor_IT/hookingman/",
-        "foldername": "stickman-hook"
+        "foldername": "stickman-hook",
+        "category": "skill"
     },
     {
         "name": "1v1.lol",
         "imgsrc": "/assets/img/1v1.webp",
         "linksrc": "/Vafor_IT/1a3b7c9e1f2g4h5j6k8l0m1n2p3q4r5s",
-        "foldername": "1v1.lol"
+        "foldername": "1v1.lol",
+        "category": "action"
     },
     {
         "name": "Buildnow.gg",
         "imgsrc": "/assets/img/builf.png",
         "linksrc": "/Vafor_IT/a3f5d9e7c2b8a4e1f3d5c7e9b0a4f6c8/",
-        "foldername": "buildnow.gg"
+        "foldername": "buildnow.gg",
+        "category": "action"
     },
     {
         "name": "Cookie Clicker",
         "imgsrc": "/assets/img/cookieclicker.webp",
         "linksrc": "/Vafor_IT/cookie-clicker/",
         "foldername": "cookie-clicker"
+        "category": "idle"
     },
     {
         "name": "Retro Football",
         "imgsrc": "/assets/img/retrobowl.jpeg",
         "linksrc": "/Vafor_IT/retrobowl/",
-        "foldername": "retro-football"
+        "foldername": "retro-football",
+        "category": "skill"
     },
     {
         "name": "Agar.io",
         "imgsrc": "/assets/img/agar.png",
         "linksrc": "/Vafor_IT/jptr-agario/web/",
-        "foldername": "agar.io"
+        "foldername": "agar.io",
+        "category": "skill"
     },
     {
         "name": "Smash Karts",
         "imgsrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3/9c9e529b14731be871b07b89660bbc2a.png",
         "linksrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3",
-        "foldername": "smash-karts"
+        "foldername": "smash-karts",
+        "category": "car"
     },
     {
         "name": "Slope",
         "imgsrc": "/assets/img/slope2.png",
         "linksrc": "/Vafor_IT/slope",
-        "foldername": "slope"
+        "foldername": "slope",
+        "category": "skill"
     },
     {
         "name": "Yohoho.io",
         "imgsrc": "/assets/img/pirates2.jfif",
         "linksrc": "/Vafor_IT/pirates",
-        "foldername": "yohoho.io"
+        "foldername": "yohoho.io",
+        "category": "skill"
     },
     {
         "name": "Motor X3m",
         "imgsrc": "/assets/img/moto.jfif",
         "linksrc": "/Vafor_IT/mx3m",
-        "foldername": "motor-x3m"
+        "foldername": "motor-x3m",
+        "category": "car"
     },
     {
         "name": "Monkey Mart",
         "imgsrc": "/assets/img/monkey.jfif",
         "linksrc": "/Vafor_IT/ihatemonkeys",
-        "foldername": "monkey-mart"
+        "foldername": "monkey-mart",
+        "category": "idle"
     },
     {
         "name": "Awesome Tanks 2",
         "imgsrc": "/assets/img/tanks2.jfif",
         "linksrc": "/Vafor_IT/awesometanks2/",
-        "foldername": "awesome-tanks-2"
+        "foldername": "awesome-tanks-2",
+        "category": "action"
     },
     {
         "name": "Time Shooter 3",
         "imgsrc": "/assets/img/superhot.jfif",
         "linksrc": "/Vafor_IT/time-shooter-3",
-        "foldername": "time-shooter-3"
+        "foldername": "time-shooter-3",
+        "category": "action"
     },
     {
         "name": "Sling Drift",
         "imgsrc": "/assets/img/slingdrift.png",
         "linksrc": "/Vafor_IT/badtaxidriver",
-        "foldername": "sling-drift"
+        "foldername": "sling-drift",
+        "category": "car"
     },
     {
         "name": "Drift Boss",
         "imgsrc": "/assets/img/drift.jpeg",
         "linksrc": "/Vafor_IT/germany-drift",
-        "foldername": "drift-boss"
+        "foldername": "drift-boss",
+        "category": "car"
     },
     {
         "name": "Bank Robbery",
         "imgsrc": "/assets/img/bank4.png",
         "linksrc": "/Vafor_IT/bank",
-        "foldername": "bank-robbery"
+        "foldername": "bank-robbery",
+        "category": "action"
     },
     {
         "name": "Ovo",
         "imgsrc": "/assets/img/ovo.png",
         "linksrc": "/Vafor_IT/ovo",
-        "foldername": "ovo"
+        "foldername": "ovo",
+        "category": "skill"
     },
     {
         "name": "Tiny Fishing",
         "imgsrc": "/assets/img/tinyfishing.png",
         "linksrc": "/Vafor_IT/tiny-fishing",
-        "foldername": "tiny-fishing"
+        "foldername": "tiny-fishing",
+        "category": "idle"
     },
     {
         "name": "Vex 6",
         "imgsrc": "/assets/img/vex6.png",
         "linksrc": "/Vafor_IT/vex6",
-        "foldername": "vex-6"
+        "foldername": "vex-6",
+        "category": "skill"
     },
     {
         "name": "Basketball Stars",
         "imgsrc": "/assets/img/basketball.jpeg",
         "linksrc": "/Vafor_IT/basketball-stars",
-        "foldername": "basketball-stars"
+        "foldername": "basketball-stars",
+        "category": "action"
     },
     {
         "name": "Super Mario 64",
         "imgsrc": "/assets/img/sm64.jpg",
         "linksrc": "/Vafor_IT/sm64",
-        "foldername": "super-mario-64"
+        "foldername": "super-mario-64",
+        "category": "adventure"
     },
     {
         "name": "60 Second Burger Run",
