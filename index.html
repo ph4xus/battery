@@ -3,210 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games - Vafor IT</title>
-    <meta name="description" content="Explore a wide collection of fun and exciting games.">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Heebo", sans-serif;
-        }
-
-        body {
-            background-color: #2d2d2d;
-            color: #eaeaea;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .navbar {
-            background-color: #3e3e3e;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 82px;
-        }
-
-        h1 {
-            color: #a0d1a4;
-        }
-
-        a {
-            color: #cfcfcf;
-            text-decoration: none;
-            font-weight: 600;
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: #a0d1a4;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            text-align: center;
-            padding: 100px 20px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section h1 {
-            font-size: 4.5rem;
-            margin-bottom: 20px;
-            color: #a0d1a4;
-            animation: fadeInDown 1.5s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-section p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            color: #cfcfcf;
-            animation: fadeInUp 1.5s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-custom {
-            background-color: #a0d1a4;
-            color: #1a1a1a;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            animation: fadeIn 2s ease-out;
-            position: relative;
-            z-index: 1;
-        }
-
-        .btn-custom:hover {
-            background-color: #8ec295;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .main-content {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .game-card {
-            background-color: #444;
-            border-radius: 10px;
-            padding: 15px;
-            text-align: center;
-            color: #eaeaea;
-            transition: transform 0.2s, box-shadow 0.3s;
-        }
-
-        .game-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .game-card h3 {
-            font-size: 1.2rem;
-            color: #a0d1a4;
-            margin-top: 10px;
-        }
-
-        .game-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .footer {
-            background-color: #3e3e3e;
-            padding: 15px;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .footer p {
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Game Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <a href="/">Vafor IT</a>
-        <div class="nav-links">
-            <a href="/">Home</a>
-            <a href="#about">About</a>
-        </div>
-    </nav>
+    <div class="container">
+        <!-- Side Navigation -->
+        <nav class="side-nav">
+            <h2>Categories</h2>
+            <ul>
+                <li><a href="#" data-category="all">All Games</a></li>
+                <li><a href="#" data-category="action">Action</a></li>
+                <li><a href="#" data-category="puzzle">Puzzle</a></li>
+                <li><a href="#" data-category="adventure">Adventure</a></li>
+            </ul>
+            <h2>Favorites</h2>
+            <div id="favorites-section"></div>
+        </nav>
 
-    <section class="hero-section">
-        <h1>Vafor IT Games</h1>
-        <p>Explore a wide collection of fun and exciting games.</p>
-    </section>
+        <!-- Main Content -->
+        <main>
+            <section id="top-10">
+                <h2>Top 10 Games</h2>
+                <div class="games-grid" id="top-10-games"></div>
+            </section>
 
-    <section class="main-content">
-        <h2>All Games</h2>
-        <div class="game-grid" id="gameGrid">
-            <!-- Games will be dynamically loaded here -->
-        </div>
-    </section>
+            <section id="all-games">
+                <h2>All Games</h2>
+                <div class="games-grid" id="all-games-grid"></div>
+            </section>
+        </main>
+    </div>
 
-    <footer class="footer">
-        <p>© 2025 Vafor IT. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        // Fetch games from /list.json and display them
-        async function loadGames() {
-            try {
-                const response = await fetch('/list.json');
-                const games = await response.json();
-                const gameGrid = document.getElementById('gameGrid');
-
-                games.forEach(game => {
-                    const gameCard = document.createElement('a');
-                    gameCard.href = `/gxmes/${game.foldername}`;
-                    gameCard.className = 'game-card';
-
-                    const gameImage = document.createElement('img');
-                    gameImage.src = game.imgsrc;
-                    gameImage.alt = game.name;
-
-                    const gameTitle = document.createElement('h3');
-                    gameTitle.textContent = game.name;
-
-                    gameCard.appendChild(gameImage);
-                    gameCard.appendChild(gameTitle);
-                    gameGrid.appendChild(gameCard);
-                });
-            } catch (error) {
-                console.error('Error loading games:', error);
-            }
-        }
-
-        // Load games when the page loads
-        window.onload = loadGames;
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
