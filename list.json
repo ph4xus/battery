@@ -157,31 +157,36 @@
         "name": "Paper.io 2",
         "imgsrc": "/assets/img/paper.jpg",
         "linksrc": "/Vafor_IT/paper-io-2/index.html",
-        "foldername": "paper.io-2"
+        "foldername": "paper.io-2",
+        "category": "action"
     },
     {
         "name": "Cat Mario",
         "imgsrc": "/assets/img/cat.png",
         "linksrc": "/Vafor_IT/cat-mario/index.html",
-        "foldername": "cat-mario"
+        "foldername": "cat-mario",
+        "category": "platformer"
     },
     {
         "name": "Idle Breakout",
         "imgsrc": "/assets/img/idle.png",
         "linksrc": "/Vafor_IT/idle-breakout/",
-        "foldername": "idle-breakout"
+        "foldername": "idle-breakout",
+        "category": "idle"
     },
     {
         "name": "Ducklife",
         "imgsrc": "/assets/img/duck.jpeg",
         "linksrc": "/Vafor_IT/ducklife1/index.html",
-        "foldername": "ducklife"
+        "foldername": "ducklife",
+        "category": "platformer"
     },
     {
         "name": "Ducklife2",
         "imgsrc": "/assets/img/ducklife2.webp",
         "linksrc": "/Vafor_IT/ducklife2",
-        "foldername": "ducklife2"
+        "foldername": "ducklife2",
+        "category": "skill"
     },
     {
         "name": "Ducklife3",
