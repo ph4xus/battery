@@ -116,7 +116,7 @@
         "imgsrc": "/assets/img/ovo.png",
         "linksrc": "/Vafor_IT/ovo",
         "foldername": "ovo",
-        "category": "skill"
+        "category": "platformer"
     },
     {
         "name": "Tiny Fishing",
@@ -130,7 +130,7 @@
         "imgsrc": "/assets/img/vex6.png",
         "linksrc": "/Vafor_IT/vex6",
         "foldername": "vex-6",
-        "category": "skill"
+        "category": "platformer"
     },
     {
         "name": "Basketball Stars",
@@ -150,7 +150,8 @@
         "name": "60 Second Burger Run",
         "imgsrc": "/assets/img/burger.png",
         "linksrc": "/Vafor_IT/60min/index.html",
-        "foldername": "60-second-burger-run"
+        "foldername": "60-second-burger-run",
+        "category": "platformer"
     },
     {
         "name": "Paper.io 2",
