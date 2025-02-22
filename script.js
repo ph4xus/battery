@@ -48,7 +48,8 @@ function toggleFavorite(button) {
 
     // Update local storage
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    loadFavorites(); // Refresh the favorites section
+    loadAllGames(); // Refresh the favorites section
+    loadFavorites(); //refresh the all games section
 }
 
 // Load favorite games from local storage
