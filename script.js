@@ -13,7 +13,7 @@ function renderGames(games, containerId) {
     container.innerHTML = games.map(game => {
         const isFavorite = favorites.some(fav => fav.name === game.name);
         return `  
-            <div class="game-card">
+            <div class="game-card" role="link" tabindex="0" onclick="window.location.href='/gxmes/${game.foldername}'">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
                     <i class="fas fa-star"></i>
                 </button>
