@@ -35,17 +35,15 @@ function toggleFavorite(button) {
     if (isFavorite) {
         favorites = favorites.filter(fav => fav.name !== game.name);
         button.classList.remove('active');
-        loadAllGames(); 
-        loadFavorites(); 
-        loadTop10(); 
     } else {
         favorites.push(game);
         button.classList.add('active');
-        loadFavorites();
     }
 
-    // Update local storage
     localStorage.setItem('favorites', JSON.stringify(favorites));
+    loadAllGames(); 
+    loadFavorites(); 
+    loadTop10(); 
 }
 
 // Load favorite games from local storage
