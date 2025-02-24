@@ -4,6 +4,12 @@ async function fetchGames() {
     return games;
 }
 
+async function fetchTop10FolderNames() {
+    const response = await fetch('/top10.txt'); // Fetch the top10.txt file
+    const text = await response.text();
+    return text.split(',').map(folder => folder.trim()); // Split by commas and trim whitespace
+}
+
 function renderGames(games, containerId) {
     const container = document.getElementById(containerId);
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -27,23 +33,18 @@ function renderGames(games, containerId) {
     });
 }
 
-function toggleFavorite(button) {
-    const game = JSON.parse(button.dataset.game);
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+async function loadTop10() {
+    const games = await fetchGames();
+    const top10FolderNames = await fetchTop10FolderNames(); // Fetch the top 10 folder names
 
-    const isFavorite = favorites.includes(game.name); // Check if the game name is in favorites
-    if (isFavorite) {
-        favorites = favorites.filter(fav => fav !== game.name); // Remove the game name from favorites
-        button.classList.remove('active');
-    } else {
-        favorites.push(game.name); // Add the game name to favorites
-        button.classList.add('active');
-    }
+    // Filter games based on the folder names in top10.txt
+    const top10Games = games.filter(game => top10FolderNames.includes(game.foldername));
+    renderGames(top10Games, 'top-10-games');
+}
 
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    loadAllGames(); 
-    loadFavorites(); 
-    loadTop10(); 
+async function loadAllGames() {
+    const games = await fetchGames();
+    renderGames(games, 'all-games-grid');
 }
 
 // Load favorite games from local storage
@@ -62,17 +63,6 @@ function loadFavorites() {
     } else {
         favoritesSection.style.display = 'none';
     }
-}
-
-async function loadTop10() {
-    const games = await fetchGames();
-    const top10 = games.slice(0, 10); 
-    renderGames(top10, 'top-10-games');
-}
-
-async function loadAllGames() {
-    const games = await fetchGames();
-    renderGames(games, 'all-games-grid');
 }
 
 document.querySelectorAll('.side-nav a').forEach(link => {
