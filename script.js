@@ -1,11 +1,9 @@
-// Fetch games from list.json
 async function fetchGames() {
     const response = await fetch('/list.json');
     const games = await response.json();
     return games;
 }
 
-// Render games in a section
 function renderGames(games, containerId) {
     const container = document.getElementById(containerId);
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -24,33 +22,30 @@ function renderGames(games, containerId) {
         `;
     }).join('');
 
-    // Add event listeners to favorite buttons
     container.querySelectorAll('.favorite-btn').forEach(button => {
         button.addEventListener('click', () => toggleFavorite(button));
     });
 }
 
-// Toggle a game as favorite
 function toggleFavorite(button) {
     const game = JSON.parse(button.dataset.game);
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     const isFavorite = favorites.some(fav => fav.name === game.name);
     if (isFavorite) {
-        // Remove from favorites
         favorites = favorites.filter(fav => fav.name !== game.name);
         button.classList.remove('active');
+        loadAllGames(); 
+        loadFavorites(); 
+        loadTop10(); 
     } else {
-        // Add to favorites
         favorites.push(game);
         button.classList.add('active');
+        loadFavorites();
     }
 
     // Update local storage
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    loadAllGames(); // Refresh the favorites section
-    loadFavorites(); //refresh the all games section
-    loadTop10(); //refresh top 10
 }
 
 // Load favorite games from local storage
@@ -60,45 +55,34 @@ function loadFavorites() {
     const favoritesContainer = document.getElementById('favorites');
 
     if (favorites.length > 0) {
-        // Display the favorites section
         favoritesSection.style.display = 'block';
-        // Render favorite games
         renderGames(favorites, 'favorites');
     } else {
-        // Hide the favorites section if there are no favorites
         favoritesSection.style.display = 'none';
     }
 }
 
-// Load top 10 games
 async function loadTop10() {
     const games = await fetchGames();
-    const top10 = games.slice(0, 10); // Assuming the first 10 are top games
+    const top10 = games.slice(0, 10); 
     renderGames(top10, 'top-10-games');
 }
 
-// Load all games
 async function loadAllGames() {
     const games = await fetchGames();
     renderGames(games, 'all-games-grid');
 }
 
-// Initialize the site
-async function init() {
-    await loadTop10();
-    await loadAllGames();
-    loadFavorites();
-}
 
-// Event listeners for side navigation
+
 document.querySelectorAll('.side-nav a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const category = e.target.getAttribute('data-category');
-        // Filter games by category (if needed)
         console.log(`Filter by: ${category}`);
     });
 });
 
-// Initialize the site
-init();
+loadTop10();
+loadAllGames();
+loadFavorites();
