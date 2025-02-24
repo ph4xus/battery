@@ -9,7 +9,7 @@ function renderGames(games, containerId) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     container.innerHTML = games.map(game => {
-        const isFavorite = favorites.some(fav => fav.name === game.name);
+        const isFavorite = favorites.includes(game.name); // Check if the game name is in favorites
         return `  
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
@@ -31,12 +31,12 @@ function toggleFavorite(button) {
     const game = JSON.parse(button.dataset.game);
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
-    const isFavorite = favorites.some(fav => fav.name === game.name);
+    const isFavorite = favorites.includes(game.name); // Check if the game name is in favorites
     if (isFavorite) {
-        favorites = favorites.filter(fav => fav.name !== game.name);
+        favorites = favorites.filter(fav => fav !== game.name); // Remove the game name from favorites
         button.classList.remove('active');
     } else {
-        favorites.push(game);
+        favorites.push(game.name); // Add the game name to favorites
         button.classList.add('active');
     }
 
@@ -54,7 +54,11 @@ function loadFavorites() {
 
     if (favorites.length > 0) {
         favoritesSection.style.display = 'block';
-        renderGames(favorites, 'favorites');
+        // Fetch all games and filter to get only the favorite games
+        fetchGames().then(games => {
+            const favoriteGames = games.filter(game => favorites.includes(game.name));
+            renderGames(favoriteGames, 'favorites');
+        });
     } else {
         favoritesSection.style.display = 'none';
     }
@@ -70,8 +74,6 @@ async function loadAllGames() {
     const games = await fetchGames();
     renderGames(games, 'all-games-grid');
 }
-
-
 
 document.querySelectorAll('.side-nav a').forEach(link => {
     link.addEventListener('click', (e) => {
