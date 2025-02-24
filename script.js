@@ -47,7 +47,24 @@ async function loadAllGames() {
     renderGames(games, 'all-games-grid');
 }
 
-// Load favorite games from local storage
+function toggleFavorite(button) {
+    const game = JSON.parse(button.dataset.game);
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    const isFavorite = favorites.includes(game.name); 
+    if (isFavorite) {
+        favorites = favorites.filter(fav => fav !== game.name); 
+        button.classList.remove('active');
+    } else {
+        favorites.push(game.name);
+        button.classList.add('active');
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    loadAllGames(); 
+    loadFavorites(); 
+    loadTop10(); 
+}
 function loadFavorites() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const favoritesSection = document.getElementById('Favorites');
