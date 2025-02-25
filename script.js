@@ -5,7 +5,7 @@ async function fetchGames() {
 }
 
 async function fetchTop10FolderNames() {
-    const response = await fetch('/top10.txt'); // Fetch the top10.txt file
+    const response = await fetch('/top10.txt'); 
     const text = await response.text();
     return text.split(',').map(folder => folder.trim()); // Split by commas and trim whitespace
 }
@@ -15,7 +15,7 @@ function renderGames(games, containerId) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     container.innerHTML = games.map(game => {
-        const isFavorite = favorites.includes(game.name); // Check if the game name is in favorites
+        const isFavorite = favorites.includes(game.name); 
         return `  
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
