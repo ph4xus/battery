@@ -7,7 +7,7 @@ async function fetchGames() {
 async function fetchTop10FolderNames() {
     const response = await fetch('/top10.txt'); 
     const text = await response.text();
-    return text.split(',').map(folder => folder.trim()); // Split by commas and trim whitespace
+    return text.split(',').map(folder => folder.trim()); 
 }
 
 function renderGames(games, containerId) {

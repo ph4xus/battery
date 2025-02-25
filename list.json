@@ -490,6 +490,12 @@
         "imgsrc": "/assets/img/poolparty.png",
         "linksrc": "/Vafor_IT/mx3m-poolparty",
         "foldername": "moto-x3m-pool-party"
+    },
+    {
+        "name": "Eggy car",
+        "imgsrc": "/assets/img/eggycar.png",
+        "linksrc": "/Vafor_IT/eggycar",
+        "foldername": "eggycar"
     }
 
 ]
