@@ -46,7 +46,7 @@ function renderGames(games, containerId) {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const game = JSON.parse(link.dataset.game);
-            updateLastPlayed(game);
+            renderLastPlayed(game);
             window.location.href = link.href; // Redirect to the game page
         });
     });
