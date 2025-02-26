@@ -3,7 +3,16 @@ async function fetchGames() {
     const games = await response.json();
     return games;
 }
-
+function renderLastPlayed() {
+    const lastPlayed = JSON.parse(localStorage.getItem('lastPlayed')) || [];
+    const container = document.getElementById('last-played-games');
+    
+    if (lastPlayed.length > 0) {
+        renderGames(lastPlayed, 'last-played-games');
+    } else {
+        container.innerHTML = '<p>No games played yet.</p>';
+    }
+}
 async function fetchTop10FolderNames() {
     const response = await fetch('/top10.txt'); 
     const text = await response.text();
@@ -23,13 +32,23 @@ function renderGames(games, containerId) {
                 </button>
                 <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}">
                 <h3>${game.name}</h3>
-                <a href="/gxmes/${game.foldername}">Play Now</a>
+                <a href="/gxmes/${game.foldername}" class="play-link" data-game='${JSON.stringify(game)}'>Play Now</a>
             </div>
         `;
     }).join('');
 
     container.querySelectorAll('.favorite-btn').forEach(button => {
         button.addEventListener('click', () => toggleFavorite(button));
+    });
+
+    // Add event listener to track last played games
+    container.querySelectorAll('.play-link').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const game = JSON.parse(link.dataset.game);
+            updateLastPlayed(game);
+            window.location.href = link.href; // Redirect to the game page
+        });
     });
 }
 
@@ -93,3 +112,6 @@ document.querySelectorAll('.side-nav a').forEach(link => {
 loadTop10();
 loadAllGames();
 loadFavorites();
+renderLastPlayed();
+
+
