@@ -234,3 +234,9 @@ main {
         font-size: 0.8rem;
     }
 }
+/* Last Played Section */
+#last-played h2 {
+    color: #a0d1a4;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
