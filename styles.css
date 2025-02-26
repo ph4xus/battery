@@ -174,3 +174,63 @@ main {
 .favorite-btn.active {
     color: #ffcc00; /* Yellow color for favorited state */
 }
+/* Media Queries for Responsive Game Cards */
+@media (max-width: 1200px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .game-card img {
+        height: 130px;
+    }
+
+    .game-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .game-card img {
+        height: 110px;
+    }
+
+    .game-card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .game-card img {
+        height: 90px;
+    }
+
+    .game-card h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+
+    .game-card img {
+        height: 70px;
+    }
+
+    .game-card h3 {
+        font-size: 0.8rem;
+    }
+}
