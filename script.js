@@ -97,8 +97,8 @@ function updateFavoritesDisplay() {
         favoritesSection.style.display = 'block'; // Keep section visible
         favoritesContainer.innerHTML = `
             <div class="favorites-empty">
-                <p>No favorite games yet</p>
-                <p>Click the <i class="fas fa-star"></i> on any game to add it here</p>
+                <i class="fas fa-star empty-star"></i>
+                <p>Add games by clicking the star button</p>
             </div>
         `;
     }
