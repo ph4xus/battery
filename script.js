@@ -3,6 +3,7 @@ async function fetchGames() {
     const games = await response.json();
     return games;
 }
+
 function renderLastPlayed() {
     const lastPlayed = JSON.parse(localStorage.getItem('lastPlayed')) || [];
     const container = document.getElementById('last-played-games');
@@ -13,6 +14,7 @@ function renderLastPlayed() {
         container.innerHTML = '<p>No games played yet.</p>';
     }
 }
+
 async function fetchTop10FolderNames() {
     const response = await fetch('/top10.txt'); 
     const text = await response.text();
@@ -24,7 +26,7 @@ function renderGames(games, containerId) {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
     container.innerHTML = games.map(game => {
-        const isFavorite = favorites.includes(game.name); 
+        const isFavorite = favorites.includes(game.name);
         return `  
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
@@ -41,22 +43,19 @@ function renderGames(games, containerId) {
         button.addEventListener('click', () => toggleFavorite(button));
     });
 
-    // Add event listener to track last played games
     container.querySelectorAll('.play-link').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const game = JSON.parse(link.dataset.game);
-            renderLastPlayed(game);
-            window.location.href = link.href; // Redirect to the game page
+            updateLastPlayed(game);
+            window.location.href = link.href;
         });
     });
 }
 
 async function loadTop10() {
     const games = await fetchGames();
-    const top10FolderNames = await fetchTop10FolderNames(); // Fetch the top 10 folder names
-
-    // Filter games based on the folder names in top10.txt
+    const top10FolderNames = await fetchTop10FolderNames();
     const top10Games = games.filter(game => top10FolderNames.includes(game.foldername));
     renderGames(top10Games, 'top-10-games');
 }
@@ -69,10 +68,10 @@ async function loadAllGames() {
 function toggleFavorite(button) {
     const game = JSON.parse(button.dataset.game);
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favorites.includes(game.name);
 
-    const isFavorite = favorites.includes(game.name); 
     if (isFavorite) {
-        favorites = favorites.filter(fav => fav !== game.name); 
+        favorites = favorites.filter(fav => fav !== game.name);
         button.classList.remove('active');
     } else {
         favorites.push(game.name);
@@ -80,27 +79,44 @@ function toggleFavorite(button) {
     }
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    loadAllGames(); 
-    loadFavorites(); 
-    loadTop10(); 
+    updateFavoritesDisplay(); // Only update what's needed
 }
-function loadFavorites() {
+
+function updateFavoritesDisplay() {
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const favoritesSection = document.getElementById('Favorites');
     const favoritesContainer = document.getElementById('favorites');
 
     if (favorites.length > 0) {
         favoritesSection.style.display = 'block';
-        // Fetch all games and filter to get only the favorite games
         fetchGames().then(games => {
             const favoriteGames = games.filter(game => favorites.includes(game.name));
             renderGames(favoriteGames, 'favorites');
         });
     } else {
-        favoritesSection.innerHTML = '<p>No games favorited yet. Hit the star to add games here!</p>';
+        favoritesSection.style.display = 'block'; // Keep section visible
+        favoritesContainer.innerHTML = '<p>No games favorited yet. Hit the star to add games here!</p>';
     }
 }
 
+function updateLastPlayed(game) {
+    let lastPlayed = JSON.parse(localStorage.getItem('lastPlayed')) || [];
+    lastPlayed = lastPlayed.filter(item => item.name !== game.name); // Remove if already exists
+    lastPlayed.unshift(game); // Add to beginning
+    lastPlayed = lastPlayed.slice(0, 5); // Limit to 5 recent games
+    localStorage.setItem('lastPlayed', JSON.stringify(lastPlayed));
+    renderLastPlayed();
+}
+
+// Initial load
+Promise.all([
+    loadTop10(),
+    loadAllGames(),
+    updateFavoritesDisplay(), // Use the new function instead of loadFavorites
+    renderLastPlayed()
+]).catch(error => console.error('Error during initial load:', error));
+
+// Navigation
 document.querySelectorAll('.side-nav a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -108,10 +124,3 @@ document.querySelectorAll('.side-nav a').forEach(link => {
         console.log(`Filter by: ${category}`);
     });
 });
-
-loadTop10();
-loadAllGames();
-loadFavorites();
-renderLastPlayed();
-
-
