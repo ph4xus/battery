@@ -97,7 +97,7 @@ function loadFavorites() {
             renderGames(favoriteGames, 'favorites');
         });
     } else {
-        favoritesSection.style.display = 'none';
+        favoritesSection.innerHTML = '<p>No games favorited yet. Hit the star to add games here!</p>';
     }
 }
 
