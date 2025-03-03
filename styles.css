@@ -240,3 +240,6 @@ main {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+a:hover {
+    cursor:pointer;
+}
