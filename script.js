@@ -95,12 +95,7 @@ function updateFavoritesDisplay() {
         });
     } else {
         favoritesSection.style.display = 'block'; // Keep section visible
-        favoritesContainer.innerHTML = `
-            <div class="favorites-empty">
-                <h3>Your Favorites Are Waiting!</h3>
-                <p>Tap the <i class="fas fa-star"></i> to save your best games here</p>
-            </div>
-        `;
+        favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
     }
 }
 
