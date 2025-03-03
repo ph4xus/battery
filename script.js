@@ -95,7 +95,12 @@ function updateFavoritesDisplay() {
         });
     } else {
         favoritesSection.style.display = 'block'; // Keep section visible
-        favoritesContainer.innerHTML = '<p>No games favorited yet.<br> Hit the star to add games here!</p>';
+        favoritesContainer.innerHTML = `
+            <div class="favorites-empty">
+                <p>No favorite games yet</p>
+                <p>Click the <i class="fas fa-star"></i> on any game to add it here</p>
+            </div>
+        `;
     }
 }
 
