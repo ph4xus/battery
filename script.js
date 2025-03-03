@@ -95,7 +95,7 @@ function updateFavoritesDisplay() {
         });
     } else {
         favoritesSection.style.display = 'block'; // Keep section visible
-        favoritesContainer.innerHTML = '<p>No games favorited yet. Hit the star to add games here!</p>';
+        favoritesContainer.innerHTML = '<p>No games favorited yet.<br> Hit the star to add games here!</p>';
     }
 }
 
