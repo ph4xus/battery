@@ -120,7 +120,7 @@ Promise.all([
 document.querySelectorAll('.side-nav a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
-        const category = e.target.getAttribute('data-category');
+        const category = e.target.innerText;
         console.log(`Filter by: ${category}`);
     });
 });
