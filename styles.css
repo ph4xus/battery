@@ -243,12 +243,14 @@ main {
 .favorites-empty {
     text-align: center;
     padding: 20px;
-    color: #666;
+    color: #777;
+}
+.favorites-empty .empty-star {
+    font-size: 30px;
+    color: #ddd; /* Light grey for empty state */
+    margin-bottom: 10px;
+    display: block;
 }
 .favorites-empty p {
-    margin: 5px 0;
-    font-size: 16px;
-}
-.favorites-empty .fas.fa-star {
-    color: #ffd700; /* Gold star color */
+    font-size: 15px;
 }
