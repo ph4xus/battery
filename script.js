@@ -16,7 +16,7 @@ function renderLastPlayed() {
 }
 
 async function fetchTop10FolderNames() {
-    const response = await fetch('/top10.json'); 
+    const response = await fetch('/metadata.json'); 
     const folderNames = await response.json();
     return folderNames;
 }
