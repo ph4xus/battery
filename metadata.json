@@ -1,12 +1,16 @@
 [
-  "stickman-hook",
-  "1v1.lol",
-  "moto-x3m",
-  "fruit-ninja",
-  "block-blast",
-  "friday-night-funkin",
-  "polytrack",
-  "run-3",
-  "tomb-of-the-mask",
-  "funny-shooter"
+    "Top10": {
+      "stickman-hook",
+      "1v1.lol",
+      "moto-x3m",
+      "fruit-ninja",
+      "block-blast",
+      "friday-night-funkin",
+      "polytrack",
+      "run-3",
+      "tomb-of-the-mask",
+      "funny-shooter"
+    },
+    "RecentlyAdded": {
+    }
 ]
