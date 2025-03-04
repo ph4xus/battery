@@ -16,9 +16,9 @@ function renderLastPlayed() {
 }
 
 async function fetchTop10FolderNames() {
-    const response = await fetch('/metadata.json'); 
-    const folderNames = await response.json();
-    return folderNames;
+    const response = await fetch('/metadata.json');
+    const data = await response.json();
+    return data[0].Top10; // Returns all items under Top10
 }
 
 function renderGames(games, containerId) {
