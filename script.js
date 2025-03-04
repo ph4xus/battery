@@ -64,7 +64,11 @@ async function loadAllGames() {
     const games = await fetchGames();
     renderGames(games, 'all-games-grid');
 }
-
+async function loadLast10Games() {
+    const games = await fetchGames();
+    const last10Games = games.slice(-10);
+    renderGames(last10Games, 'last-10-games');
+}
 function toggleFavorite(button) {
     const game = JSON.parse(button.dataset.game);
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -108,12 +112,13 @@ function updateLastPlayed(game) {
     renderLastPlayed();
 }
 
-// Initial load
+
 Promise.all([
     loadTop10(),
     loadAllGames(),
-    updateFavoritesDisplay(), // Use the new function instead of loadFavorites
-    renderLastPlayed()
+    updateFavoritesDisplay(),
+    renderLastPlayed(),
+    loadLast10Games()
 ]).catch(error => console.error('Error during initial load:', error));
 
 // Navigation
