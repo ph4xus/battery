@@ -66,7 +66,7 @@ async function loadAllGames() {
 }
 async function loadLast10Games() {
     const games = await fetchGames();
-    const last10Games = games.slice(-10);
+    const last10Games = games.slice(-10).reverse();
     renderGames(last10Games, 'last-10-games');
 }
 function toggleFavorite(button) {
