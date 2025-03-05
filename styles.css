@@ -72,7 +72,7 @@ main {
 /* Game Grid */
 .games-grid {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -84,7 +84,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s, box-shadow 0.3s;
     text-align: center;
-    aspect-ratio: 3 / 4; 
 }
 
 .game-card:hover {
@@ -103,7 +102,6 @@ main {
     margin: 10px 0;
     font-size: 1.2rem;
     color: #a0d1a4;
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Responsive font size */
 }
 
 .game-card a {
@@ -166,7 +164,6 @@ main {
     color: #cfcfcf;
     font-size: 1.5rem;
     cursor: pointer;
-    font-size: clamp(1rem, 2vw, 1.5rem);
     transition: color 0.3s;
 }
 
@@ -177,7 +174,66 @@ main {
 .favorite-btn.active {
     color: #ffcc00; /* Yellow color for favorited state */
 }
+/* Media Queries for Responsive Game Cards */
+@media (max-width: 1200px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 15px;
+    }
 
+    .game-card img {
+        height: 130px;
+    }
+
+    .game-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .game-card img {
+        height: 110px;
+    }
+
+    .game-card h3 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .game-card img {
+        height: 90px;
+    }
+
+    .game-card h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+
+    .game-card img {
+        height: 70px;
+    }
+
+    .game-card h3 {
+        font-size: 0.8rem;
+    }
+}
 #last-10 h2 {
     color: #a0d1a4;
     font-size: 2rem;
@@ -185,43 +241,4 @@ main {
 }
 a:hover {
     cursor:pointer;
-}
-@media (max-width: 1200px) {
-    .games-grid {
-        grid-template-columns: repeat(10, 1fr); /* Still 10 columns */
-        gap: 15px;
-    }
-    .game-card {
-        aspect-ratio: 2 / 3; /* Adjust ratio for smaller screens */
-    }
-}
-
-@media (max-width: 992px) {
-    .games-grid {
-        grid-template-columns: repeat(10, 1fr);
-        gap: 12px;
-    }
-    .game-card {
-        aspect-ratio: 1 / 2; /* Further adjust ratio */
-    }
-}
-
-@media (max-width: 768px) {
-    .games-grid {
-        grid-template-columns: repeat(5, 1fr); /* Switch to 5 columns for smaller screens */
-        gap: 10px;
-    }
-    .game-card {
-        aspect-ratio: 3 / 4;
-    }
-}
-
-@media (max-width: 576px) {
-    .games-grid {
-        grid-template-columns: repeat(3, 1fr); /* Switch to 3 columns for very small screens */
-        gap: 8px;
-    }
-    .game-card {
-        aspect-ratio: 2 / 3;
-    }
 }
