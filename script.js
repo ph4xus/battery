@@ -98,7 +98,7 @@ function updateFavoritesDisplay() {
             renderGames(favoriteGames, 'favorites');
         });
     } else {
-        favoritesSection.style.display = 'block'; // Keep section visible
+        favoritesSection.style.display = 'block';
         favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
     }
 }
