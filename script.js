@@ -18,7 +18,7 @@ function renderLastPlayed() {
 async function fetchTop10FolderNames() {
     const response = await fetch('/metadata.json');
     const data = await response.json();
-    return data[0].Top10; // Returns all items under Top10
+    return data[0].Top10; 
 }
 
 function renderGames(games, containerId) {
@@ -83,7 +83,7 @@ function toggleFavorite(button) {
     }
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoritesDisplay(); // Only update what's needed
+    updateFavoritesDisplay();
 }
 
 function updateFavoritesDisplay() {
@@ -105,9 +105,9 @@ function updateFavoritesDisplay() {
 
 function updateLastPlayed(game) {
     let lastPlayed = JSON.parse(localStorage.getItem('lastPlayed')) || [];
-    lastPlayed = lastPlayed.filter(item => item.name !== game.name); // Remove if already exists
-    lastPlayed.unshift(game); // Add to beginning
-    lastPlayed = lastPlayed.slice(0, 5); // Limit to 5 recent games
+    lastPlayed = lastPlayed.filter(item => item.name !== game.name);
+    lastPlayed.unshift(game); 
+    lastPlayed = lastPlayed.slice(0, 5); 
     localStorage.setItem('lastPlayed', JSON.stringify(lastPlayed));
     renderLastPlayed();
 }
@@ -121,7 +121,6 @@ Promise.all([
     loadLast10Games()
 ]).catch(error => console.error('Error during initial load:', error));
 
-// Navigation
 document.querySelectorAll('.side-nav a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
