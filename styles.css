@@ -242,9 +242,3 @@ main {
 a:hover {
     cursor:pointer;
 }
-.tab-content {
-    display: none;
-}
-.tab-content.active {
-    display: block;
- }
