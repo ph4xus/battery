@@ -101,6 +101,16 @@ function updateFavoritesDisplay() {
         favoritesSection.style.display = 'block';
         favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
     }
+    document.querySelectorAll('.game-card').forEach(card => {
+         const button = card.querySelector('.favorite-btn');
+         const game = JSON.parse(button.dataset.game);
+         const isFavorite = favorites.includes(game.name);
+         if (isFavorite) {
+              button.classList.add('active');
+         } else {
+             button.classList.remove('active');
+         }
+     }
 }
 
 function updateLastPlayed(game) {
