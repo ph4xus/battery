@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
+<div class="container">
         <nav class="side-nav">
             <h2>Categories</h2>
             <ul>
@@ -22,30 +22,42 @@
         </nav>
 
         <main>
-            <section id="Favorites" style="display: none;">
-                <h2>Favorites</h2>
-                <div class="games-grid" id="favorites"></div>
-            </section>
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-button active" data-tab="Favorites">Favorites</button>
+                    <button class="tab-button" data-tab="last-played">Recently Played</button>
+                    <button class="tab-button" data-tab="top-10">Top 10 Games</button>
+                    <button class="tab-button" data-tab="last-10">Recently Added</button>
+                    <button class="tab-button" data-tab="all-games">All Games</button>
+                </div>
 
-            <section id="last-played">
-                <h2>Recently Played</h2>
-                <div class="games-grid" id="last-played-games"></div>
-            </section>
+                <div id="tab-contents">
+                    <section id="Favorites" class="tab-content">
+                        <h2>Favorites</h2>
+                        <div class="games-grid" id="favorites"></div>
+                    </section>
 
-            <section id="top-10">
-                <h2>Top 10 Games</h2>
-                <div class="games-grid" id="top-10-games"></div>
-            </section>
-            
-            <section id="last-10">
-                <h2>Recently added</h2>
-                <div class="games-grid" id="last-10-games"></div>
-            </section>
-            <!-- want this section to only appear when the all games section is clicked and i want all the other categories to dissapear when this is clicked-->
-            <section id="all-games">
-                <h2>All Games</h2>
-                <div class="games-grid" id="all-games-grid"></div>
-            </section>
+                    <section id="last-played" class="tab-content">
+                        <h2>Recently Played</h2>
+                        <div class="games-grid" id="last-played-games"></div>
+                    </section>
+
+                    <section id="top-10" class="tab-content">
+                        <h2>Top 10 Games</h2>
+                        <div class="games-grid" id="top-10-games"></div>
+                    </section>
+                    
+                    <section id="last-10" class="tab-content">
+                        <h2>Recently Added</h2>
+                        <div class="games-grid" id="last-10-games"></div>
+                    </section>
+
+                    <section id="all-games" class="tab-content">
+                        <h2>All Games</h2>
+                        <div class="games-grid" id="all-games-grid"></div>
+                    </section>
+                </div>
+            </div>
         </main>
     </div>
 
