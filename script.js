@@ -113,28 +113,6 @@ function updateLastPlayed(game) {
 }
 
 
-function initializeTabs() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            // Show the first tab by default
-            document.querySelector('.tab-content').classList.add('active');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Remove active class from all buttons and contents
-                    tabButtons.forEach(btn => btn.classList.remove('active'));
-                    tabContents.forEach(content => content.classList.remove('active'));
-
-                    // Add active class to clicked button and corresponding content
-                    button.classList.add('active');
-                    const tabId = button.getAttribute('data-tab');
-                    document.getElementById(tabId).classList.add('active');
-                });
-            });
-        }
-
-        // Update the Promise.all to include tab initialization
         Promise.all([
             loadTop10(),
             loadAllGames(),
@@ -142,13 +120,3 @@ function initializeTabs() {
             renderLastPlayed(),
             loadLast10Games()
         ])
-        .then(() => initializeTabs())
-        .catch(error => console.error('Error during initial load:', error));
-
-        document.querySelectorAll('.side-nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const category = e.target.innerText;
-                console.log(`Filter by: ${category}`);
-            });
-        });
