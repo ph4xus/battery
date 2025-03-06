@@ -122,11 +122,10 @@ function updateLastPlayed(game) {
     renderLastPlayed();
 }
 
-
-        Promise.all([
-            loadTop10(),
-            loadAllGames(),
-            updateFavoritesDisplay(),
-            renderLastPlayed(),
-            loadLast10Games()
-        ])
+Promise.all([
+    loadTop10(),
+    loadAllGames(),
+    updateFavoritesDisplay(),
+    renderLastPlayed(),
+    loadLast10Games()
+]);
