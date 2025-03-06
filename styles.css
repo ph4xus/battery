@@ -243,8 +243,8 @@ a:hover {
     cursor:pointer;
 }
 .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
+    display: none;
+}
+.tab-content.active {
+    display: block;
+ }
