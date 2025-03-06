@@ -5,7 +5,7 @@ fetch('/list.json')
     const today = new Date();
     const dayOfYear = Math.floor((today - new Date(today.getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
     const index = dayOfYear % games;
-    console.log("Day of Year:", dayOfYear, "Index:", index);
+    //console.log("Day of Year:", dayOfYear, "Index:", index);
     
     const item = data[index];
     const name1 = item.name;
