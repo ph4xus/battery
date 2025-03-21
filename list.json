@@ -496,6 +496,42 @@
         "imgsrc": "/assets/img/eggycar.png",
         "linksrc": "/Vafor_IT/eggycar",
         "foldername": "eggycar"
+    },
+        {
+        "name": "Bob the robber",
+        "imgsrc": "/assets/img/bob.jpg",
+        "linksrc": "/Vafor_IT/BobTheRobber",
+        "foldername": "bob-the-robber"
+    },
+    {
+        "name": "Bob the robber 2",
+        "imgsrc": "/assets/img/bob2.jpeg",
+        "linksrc": "/Vafor_IT/BobTheRobber2",
+        "foldername": "bob-the-robber-2"
+    },
+    {
+        "name": "Bob the robber 3",
+        "imgsrc": "/assets/img/bob3.jfif",
+        "linksrc": "/Vafor_IT/BobTheRobber3",
+        "foldername": "bob-the-robber-3"
+    },
+    {
+        "name": "Bob the robber 4",
+        "imgsrc": "/assets/img/bob4.jpg",
+        "linksrc": "/Vafor_IT/BobTheRobber4",
+        "foldername": "bob-the-robber-4"
+    },
+    {
+        "name": "2048",
+        "imgsrc": "/assets/img/2048.png",
+        "linksrc": "/Vafor_IT/2048",
+        "foldername": "2048"
+    },
+    {
+        "name": "tetris",
+        "imgsrc": "/assets/img/tetris.png",
+        "linksrc": "/Vafor_IT/tetris",
+        "foldername": "tetris"
     }
 
 ]
