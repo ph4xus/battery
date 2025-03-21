@@ -125,6 +125,9 @@ main {
 }
 
 /* All Games Section */
+#all-games {
+    display: none;
+}
 #all-games h2 {
     color: #a0d1a4;
     font-size: 2rem;
