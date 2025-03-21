@@ -1,5 +1,5 @@
 async function fetchGames() {
-    const response = await fetch('/list.json');
+    const response = await fetch('json/list.json');
     const games = await response.json();
     return games;
 }
@@ -16,7 +16,7 @@ function renderLastPlayed() {
 }
 
 async function fetchTop10FolderNames() {
-    const response = await fetch('/metadata.json');
+    const response = await fetch('json/metadata.json');
     const data = await response.json();
     return data[0].Top10; 
 }
