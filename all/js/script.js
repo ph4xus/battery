@@ -7,7 +7,7 @@ let link2 = getParentFolder();
 document.addEventListener('DOMContentLoaded', function () {
     const loadingText = document.getElementById('loadingText');
     
-    fetch('../list.json')
+    fetch('../../json/list.json')
         .then(response => response.json())
         .then(data => {
             const gxmeGrid = document.querySelector('.gxme-grid');
