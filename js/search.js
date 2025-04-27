@@ -1,4 +1,3 @@
-// Get search query from URL
 const urlParams = new URLSearchParams(window.location.search);
 const searchQuery = urlParams.get('q')?.toLowerCase() || '';
 
