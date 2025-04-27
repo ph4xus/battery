@@ -528,10 +528,28 @@
         "foldername": "2048"
     },
     {
-        "name": "tetris",
+        "name": "Tetris",
         "imgsrc": "/assets/img/tetris.png",
         "linksrc": "/Vafor_IT/tetris",
         "foldername": "tetris"
+    },
+    {
+        "name": "Crazy Cattle",
+        "imgsrc": "/assets/img/crazycattle.jpg",
+        "linksrc": "/Vafor_IT/crazycattle",
+        "foldername": "crazy-cattle"
+    },
+    {
+        "name": "Snake is Mlg Edition",
+        "imgsrc": "/assets/img/snakemlg.jfif",
+        "linksrc": "/Vafor_IT/snakemlg",
+        "foldername": "snake-is-mlg"
+    },
+    {
+        "name": "Tower of Destiny",
+        "imgsrc": "/assets/img/towerofdestiny.png",
+        "linksrc": "/Vafor_IT/TowerOfDestiny",
+        "foldername": "tower-of-destiny"
     }
 
 ]

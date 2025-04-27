@@ -1,3 +1,11 @@
+document.getElementById('search-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const query = document.getElementById('search-input').value.trim();
+    if (query) {
+        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
+    }
+});
+
 const all = document.querySelectorAll('section');
 const HomePage = Array.from(all).slice(0, 4);
 const allgames = document.querySelectorAll('section')[4];
