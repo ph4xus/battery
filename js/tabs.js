@@ -1,11 +1,3 @@
-document.getElementById('search-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const query = document.getElementById('search-input').value.trim();
-    if (query) {
-        window.location.href = `search.html?q=${encodeURIComponent(query)}`;
-    }
-});
-
 const tabs = document.querySelectorAll('.side-nav ul li a');
 const sections = document.querySelectorAll('section');
 
