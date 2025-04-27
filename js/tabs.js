@@ -6,40 +6,39 @@ document.getElementById('search-form').addEventListener('submit', function(e) {
     }
 });
 
-const all = document.querySelectorAll('section');
-const HomePage = Array.from(all).slice(0, 4);
-const allgames = document.querySelectorAll('section')[4];
-const allGamesLi = document.getElementById('all-games');
-const mainLi = document.getElementById('home');
+const tabs = document.querySelectorAll('.side-nav ul li a');
+const sections = document.querySelectorAll('section');
 
-
-function hide_main() {
-    HomePage.forEach(section => {
+function hideAllSections() {
+    sections.forEach(section => {
         section.style.display = 'none';
-      });
-}
-
-function hide_allgames() {
-  allgames.style.display = 'none';
-}
-
-function display_main() {
-  HomePage.forEach(section => {
-      section.style.display = 'block';
     });
 }
 
-function display_allgames() {
-  allgames.style.display = 'block';
+function showSection(id) {
+    hideAllSections();
+    const section = document.getElementById(id);
+    if (section) {
+        section.style.display = 'block';
+    }
 }
 
-allGamesLi.addEventListener('click', function() {
-  hide_main();
-  display_allgames();
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const tabId = tab.parentElement.id; 
+
+        if (tabId === 'home') {
+            hideAllSections();
+            Array.from(sections).slice(0, 4).forEach(section => {
+                section.style.display = 'block';
+            });
+        } else if (tabId === 'all-games') {
+            showSection('all-games2');
+        }
+    });
 });
 
-mainLi.addEventListener('click', function() {
-  hide_allgames();
-  display_main();
+Array.from(sections).slice(0, 4).forEach(section => {
+    section.style.display = 'block';
 });
-
+document.getElementById('all-games2').style.display = 'none';
