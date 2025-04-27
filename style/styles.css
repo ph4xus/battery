@@ -244,3 +244,29 @@ main {
 a:hover {
     cursor:pointer;
 }
+/* Search Bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #3e3e3e;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-container input {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #eaeaea;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.search-container .search-icon {
+    color: #a0d1a4;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
