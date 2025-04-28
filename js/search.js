@@ -14,7 +14,7 @@ if (searchQuery) {
                     const card = document.createElement('div');
                     card.classList.add('game-card');
                     card.innerHTML = `
-                        <img src="${game.imgsrc}" alt="${game.name}">
+                        <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}">
                         <h3>${game.name}</h3>
                         <a href="${game.linksrc}">Play Now</a>
                     `;
