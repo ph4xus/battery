@@ -29,5 +29,7 @@ if (searchQuery) {
             resultsContainer.innerHTML = `<p>Failed to load games.</p>`;
         });
 } else {
-    resultsContainer.innerHTML = `<p>No search query provided.</p>`;
+    alert("No search query provided")
+    window.location.replace("/");
+
 }
