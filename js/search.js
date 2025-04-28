@@ -4,7 +4,7 @@ const searchQuery = urlParams.get('q')?.toLowerCase() || '';
 const resultsContainer = document.getElementById('search-results');
 
 if (searchQuery) {
-    fetch('json/list.json')
+    fetch('../json/list.json')
         .then(response => response.json())
         .then(data => {
             const matches = data.filter(game => game.name.toLowerCase().includes(searchQuery));
