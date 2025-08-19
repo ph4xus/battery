@@ -3,33 +3,27 @@ const tabContents = document.getElementById('tab-contents');
 let games = [];
 let categorySections = {};
 
-// Default sections that should show on Home
 const defaultSections = ['Favorites', 'last-played', 'top-10', 'last-10'];
 
-// Hide all sections
 function hideAllSections() {
     const sections = document.querySelectorAll('#tab-contents section');
     sections.forEach(section => section.style.display = 'none');
 }
 
-// Show a section by ID
 function showSection(id) {
     hideAllSections();
     const section = document.getElementById(id);
     if (section) section.style.display = 'block';
 }
 
-// Create a category section and tab
 function createCategorySection(category) {
     if (categorySections[category]) return;
 
-    // Create tab
     const li = document.createElement('li');
     li.id = category.toLowerCase();
     li.innerHTML = `<a>${category}</a>`;
     navTabs.insertBefore(li, document.getElementById('all-games')); 
 
-    // Create section
     const section = document.createElement('section');
     section.id = `${category.toLowerCase()}-games`;
     section.className = 'tab-content';
@@ -40,22 +34,21 @@ function createCategorySection(category) {
     tabContents.appendChild(section);
     categorySections[category] = section;
 
-    // Hide section initially
     section.style.display = 'none';
 
-    // Add click listener
     li.querySelector('a').addEventListener('click', () => {
         showSection(`${category.toLowerCase()}-games`);
     });
 }
 
-// Populate games in a section
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const grid = section.querySelector('.games-grid');
     grid.innerHTML = '';
 
     gamesList.forEach(game => {
+     const isFavorite = favorites.includes(game.name);
         const gameHTML = `
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
@@ -70,13 +63,11 @@ function populateGames(sectionId, gamesList) {
     });
 }
 
-// Fetch JSON and initialize
 fetch('json/list.json')
     .then(res => res.json())
     .then(data => {
         games = data;
 
-        // Create category sections dynamically
         const categories = [...new Set(games.map(g => g.category))];
         categories.forEach(category => {
             createCategorySection(category);
@@ -84,10 +75,8 @@ fetch('json/list.json')
             populateGames(`${category.toLowerCase()}-games`, catGames);
         });
 
-        // Populate All Games
         populateGames('all-games-grid', games);
 
-        // Show only default sections on page load
         hideAllSections();
         defaultSections.forEach(id => {
             const section = document.getElementById(id);
@@ -95,7 +84,6 @@ fetch('json/list.json')
         });
     });
 
-// Handle clicks for Home and All Games
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
