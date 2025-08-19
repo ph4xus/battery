@@ -9,75 +9,70 @@
 </head>
 <body>
 <div class="container">
-        <nav class="side-nav">
-            <h2>Vafor</h2>
-            <ul>
-                <li id="home"><a>Home</a></li>
-                <li><a>Action</a></li>
-                <li><a>Puzzle</a></li>
-                <li><a>Platformer</a></li>
-                <li><a>Adventure</a></li>
-                <li><a>Car</a></li>
-                <li id="all-games"><a>All Games</a></li>
-            </ul>
-        </nav>
+    <nav class="side-nav">
+        <h2>Vafor</h2>
+        <ul id="nav-tabs">
+            <li id="home"><a>Home</a></li>
+            <!-- Category tabs will be dynamically added here -->
+            <li id="all-games"><a>All Games</a></li>
+        </ul>
+    </nav>
 
-        <main>
-                <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Search games...">
-                    <i class="fas fa-search search-icon"></i>
-                </div>
-                <div id="tab-contents">
-                    <section id="Favorites" class="tab-content">
-                        <h2>Favorites</h2>
-                        <div class="games-grid" id="favorites"></div>
-                    </section>
+    <main>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search games...">
+            <i class="fas fa-search search-icon"></i>
+        </div>
 
-                    <section id="last-played" class="tab-content">
-                        <h2>Recently Played</h2>
-                        <div class="games-grid" id="last-played-games"></div>
-                    </section>
+        <div id="tab-contents">
+            <!-- Default sections -->
+            <section id="Favorites" class="tab-content">
+                <h2>Favorites</h2>
+                <div class="games-grid" id="favorites"></div>
+            </section>
 
-                    <section id="top-10" class="tab-content">
-                        <h2>Top 10 Games</h2>
-                        <div class="games-grid" id="top-10-games"></div>
-                    </section>
-                    
-                    <section id="last-10" class="tab-content">
-                        <h2>Recently Added</h2>
-                        <div class="games-grid" id="last-10-games"></div>
-                    </section>
+            <section id="last-played" class="tab-content">
+                <h2>Recently Played</h2>
+                <div class="games-grid" id="last-played-games"></div>
+            </section>
 
-                    <section id="all-games2" class="tab-content">
-                        <h2>All Games</h2>
-                        <div class="games-grid" id="all-games-grid"></div>
-                    </section>
-                </div>
-            </div>
-        </main>
-    </div>
-    <script>
-        const searchInput = document.getElementById('search-input');
-        const searchIcon = document.querySelector('.search-icon');
+            <section id="top-10" class="tab-content">
+                <h2>Top 10 Games</h2>
+                <div class="games-grid" id="top-10-games"></div>
+            </section>
+            
+            <section id="last-10" class="tab-content">
+                <h2>Recently Added</h2>
+                <div class="games-grid" id="last-10-games"></div>
+            </section>
 
-         function performSearch() {
-            const query = searchInput.value.trim();
-            if (query) {
-                window.location.href = `/search/?q=${encodeURIComponent(query)}`;
-            }
+            <section id="all-games2" class="tab-content">
+                <h2>All Games</h2>
+                <div class="games-grid" id="all-games-grid"></div>
+            </section>
+            <!-- Category sections will be dynamically added here -->
+        </div>
+    </main>
+</div>
+
+<script>
+    const searchInput = document.getElementById('search-input');
+    const searchIcon = document.querySelector('.search-icon');
+
+    function performSearch() {
+        const query = searchInput.value.trim();
+        if (query) {
+            window.location.href = `/search/?q=${encodeURIComponent(query)}`;
         }
+    }
 
-        searchInput.addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter') performSearch();
+    });
 
-        searchIcon.addEventListener('click', function() {
-            performSearch();
-        });
-    </script>
-    <script src="js/script.js"></script>
-    <script src="js/tabs.js"></script>
+    searchIcon.addEventListener('click', performSearch);
+</script>
+<script src="js/script.js"></script>
+<script src="js/tabs.js"></script>
 </body>
 </html>
