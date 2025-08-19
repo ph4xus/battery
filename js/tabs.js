@@ -63,6 +63,20 @@ function populateGames(sectionId, gamesList) {
         `;
         grid.innerHTML += gameHTML;
     });
+
+    if (sectionId === 'Favorites' || !defaultSections.includes(sectionId)) {
+        const favBtns = section.querySelectorAll('.favorite-btn');
+        favBtns.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                onlyforstar(this);
+
+                if (sectionId === 'Favorites') {
+                    diffrentname();
+                }   
+            });
+        });
+    }
 }
 
 fetch('json/list.json')
@@ -98,9 +112,36 @@ navTabs.addEventListener('click', e => {
             const section = document.getElementById(id);
             if (section) section.style.display = 'block';
         });
+        diffrentname();
     } else if (tabId === 'all-games') {
         showSection('all-games');
     } else if (categorySections[tabId]) {
         showSection(`${tabId}-games`);
     }
 });
+function onlyforstar(button) {
+    const game = JSON.parse(button.dataset.game);
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favorites.includes(game.name);
+
+    if (isFavorite) {
+        favorites = favorites.filter(fav => fav !== game.name);
+        button.classList.remove('active');
+    } else {
+        favorites.push(game.name);
+        button.classList.add('active');
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+function diffrentname() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoriteGames = games.filter(g => favorites.includes(g.name));
+    const favoritesContainer = document.getElementById('favorites');
+
+    if (favoriteGames.length === 0) {
+        favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
+    } else {
+        populateGames('Favorites', favoriteGames);
+    }
+}
