@@ -36,7 +36,22 @@ function createCategorySection(category) {
 
     section.style.display = 'none';
 }
+function toggleFavorite(button) {
+    const game = JSON.parse(button.dataset.game);
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favorites.includes(game.name);
 
+    if (isFavorite) {
+        favorites = favorites.filter(fav => fav !== game.name);
+        button.classList.remove('active');
+    } else {
+        favorites.push(game.name);
+        button.classList.add('active');
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    updateFavoritesDisplay();
+}
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
     const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -79,50 +94,6 @@ fetch('json/list.json')
             if (section) section.style.display = 'block';
         });
     });
-function toggleFavorite(button) {
-    const game = JSON.parse(button.dataset.game);
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const isFavorite = favorites.includes(game.name);
-
-    if (isFavorite) {
-        favorites = favorites.filter(fav => fav !== game.name);
-        button.classList.remove('active');
-    } else {
-        favorites.push(game.name);
-        button.classList.add('active');
-    }
-
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoritesDisplay();
-}
-
-function updateFavoritesDisplay() {
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const favoritesSection = document.getElementById('Favorites');
-    const favoritesContainer = document.getElementById('favorites');
-
-    if (favorites.length > 0) {
-        favoritesSection.style.display = 'block';
-        fetchGames().then(games => {
-            const favoriteGames = games.filter(game => favorites.includes(game.name));
-            renderGames(favoriteGames, 'favorites');
-        });
-    } else {
-        favoritesSection.style.display = 'block';
-        favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
-    }
-
-    document.querySelectorAll('.game-card').forEach(card => {
-        const button = card.querySelector('.favorite-btn');
-        const game = JSON.parse(button.dataset.game);
-        const isFavorite = favorites.includes(game.name);
-        if (isFavorite) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
-        }
-    });
-}
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
