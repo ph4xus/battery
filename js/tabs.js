@@ -3,27 +3,33 @@ const tabContents = document.getElementById('tab-contents');
 let games = [];
 let categorySections = {};
 
+// Default sections that should show on Home
 const defaultSections = ['Favorites', 'last-played', 'top-10', 'last-10'];
 
+// Hide all sections
 function hideAllSections() {
     const sections = document.querySelectorAll('#tab-contents section');
     sections.forEach(section => section.style.display = 'none');
 }
 
+// Show a section by ID
 function showSection(id) {
     hideAllSections();
     const section = document.getElementById(id);
     if (section) section.style.display = 'block';
 }
 
+// Create a category section and tab
 function createCategorySection(category) {
     if (categorySections[category]) return;
 
+    // Create tab
     const li = document.createElement('li');
     li.id = category.toLowerCase();
     li.innerHTML = `<a>${category}</a>`;
     navTabs.insertBefore(li, document.getElementById('all-games')); 
 
+    // Create section
     const section = document.createElement('section');
     section.id = `${category.toLowerCase()}-games`;
     section.className = 'tab-content';
@@ -34,40 +40,36 @@ function createCategorySection(category) {
     tabContents.appendChild(section);
     categorySections[category] = section;
 
+    // Hide section initially
     section.style.display = 'none';
-
-    li.querySelector('a').addEventListener('click', () => {
-        showSection(`${category.toLowerCase()}-games`);
-    });
 }
 
+// Populate games in a section
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const grid = section.querySelector('.games-grid');
     grid.innerHTML = '';
 
     gamesList.forEach(game => {
-     const isFavorite = favorites.includes(game.name);
         const gameHTML = `
             <div class="game-card">
-                <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
-                    <i class="fas fa-star"></i>
-                </button>
-                <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}">
-                <h3>${game.name}</h3>
-                <a href="/gxmes/${game.foldername}" class="play-link" data-game='${JSON.stringify(game)}'>Play Now</a>
+                <a href="${game.linksrc}">
+                    <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}" />
+                    <p>${game.name}</p>
+                </a>
             </div>
         `;
         grid.innerHTML += gameHTML;
     });
 }
 
+// Fetch JSON and initialize
 fetch('json/list.json')
     .then(res => res.json())
     .then(data => {
         games = data;
 
+        // Create category sections dynamically
         const categories = [...new Set(games.map(g => g.category))];
         categories.forEach(category => {
             createCategorySection(category);
@@ -75,8 +77,10 @@ fetch('json/list.json')
             populateGames(`${category.toLowerCase()}-games`, catGames);
         });
 
+        // Populate All Games
         populateGames('all-games-grid', games);
 
+        // Show only default sections on page load
         hideAllSections();
         defaultSections.forEach(id => {
             const section = document.getElementById(id);
@@ -84,11 +88,12 @@ fetch('json/list.json')
         });
     });
 
+// Unified click handler for all tabs
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
-    const parentLi = e.target.parentElement;
-    const tabId = parentLi.id || e.target.textContent.trim().toLowerCase();
+    const tabText = e.target.textContent.trim().toLowerCase();
+    const tabId = e.target.parentElement.id || tabText;
 
     if (tabId === 'home') {
         hideAllSections();
@@ -98,5 +103,8 @@ navTabs.addEventListener('click', e => {
         });
     } else if (tabId === 'all-games') {
         showSection('all-games2');
+    } else if (categorySections[tabId.charAt(0).toUpperCase() + tabId.slice(1)]) {
+        // For dynamic category tabs
+        showSection(`${tabId}-games`);
     }
 });
