@@ -1,555 +1,646 @@
 [
-    {
-        "name": "Stickman Hook",
-        "imgsrc": "/assets/img/stickman.jpeg",
-        "linksrc": "/Vafor_IT/hookingman/",
-        "foldername": "stickman-hook"
-    },
-    {
-        "name": "1v1.lol",
-        "imgsrc": "/assets/img/1v1.webp",
-        "linksrc": "/Vafor_IT/1a3b7c9e1f2g4h5j6k8l0m1n2p3q4r5s",
-        "foldername": "1v1.lol"
-    },
-    {
-        "name": "Buildnow.gg",
-        "imgsrc": "/assets/img/builf.png",
-        "linksrc": "/Vafor_IT/a3f5d9e7c2b8a4e1f3d5c7e9b0a4f6c8/",
-        "foldername": "buildnow.gg"
-    },
-    {
-        "name": "Cookie Clicker",
-        "imgsrc": "/assets/img/cookieclicker.webp",
-        "linksrc": "/Vafor_IT/cookie-clicker/",
-        "foldername": "cookie-clicker"
-    },
-    {
-        "name": "Retro Football",
-        "imgsrc": "/assets/img/retrobowl.jpeg",
-        "linksrc": "/Vafor_IT/retrobowl/",
-        "foldername": "retro-football"
-    },
-    {
-        "name": "Agar.io",
-        "imgsrc": "/assets/img/agar.png",
-        "linksrc": "/Vafor_IT/jptr-agario/web/",
-        "foldername": "agar.io"
-    },
-    {
-        "name": "Smash Karts",
-        "imgsrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3/9c9e529b14731be871b07b89660bbc2a.png",
-        "linksrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3",
-        "foldername": "smash-karts"
-    },
-    {
-        "name": "Slope",
-        "imgsrc": "/assets/img/slope2.png",
-        "linksrc": "/Vafor_IT/slope",
-        "foldername": "slope"
-    },
-    {
-        "name": "Yohoho.io",
-        "imgsrc": "/assets/img/pirates2.jfif",
-        "linksrc": "/Vafor_IT/pirates",
-        "foldername": "yohoho.io"
-    },
-    {
-        "name": "Gun Spin",
-        "imgsrc": "/assets/img/gunspin.png",
-        "linksrc": "/Vafor_IT/gunspin",
-        "foldername": "gunspin"
-    },
-    {
-        "name": "Monkey Mart",
-        "imgsrc": "/assets/img/monkey.jfif",
-        "linksrc": "/Vafor_IT/ihatemonkeys",
-        "foldername": "monkey-mart"
-    },
-    {
-        "name": "Awesome Tanks 2",
-        "imgsrc": "/assets/img/tanks2.jfif",
-        "linksrc": "/Vafor_IT/awesometanks2/",
-        "foldername": "awesome-tanks-2"
-    },
-    {
-        "name": "Time Shooter 3",
-        "imgsrc": "/assets/img/superhot.jfif",
-        "linksrc": "/Vafor_IT/time-shooter-3",
-        "foldername": "time-shooter-3"
-    },
-    {
-        "name": "Sling Drift",
-        "imgsrc": "/assets/img/slingdrift.png",
-        "linksrc": "/Vafor_IT/badtaxidriver",
-        "foldername": "sling-drift"
-    },
-    {
-        "name": "Drift Boss",
-        "imgsrc": "/assets/img/drift.jpeg",
-        "linksrc": "/Vafor_IT/germany-drift",
-        "foldername": "drift-boss"
-    },
-    {
-        "name": "Bank Robbery",
-        "imgsrc": "/assets/img/bank4.png",
-        "linksrc": "/Vafor_IT/bank",
-        "foldername": "bank-robbery"
-    },
-    {
-        "name": "Ovo",
-        "imgsrc": "/assets/img/ovo.png",
-        "linksrc": "/Vafor_IT/ovo",
-        "foldername": "ovo"
-    },
-    {
-        "name": "Tiny Fishing",
-        "imgsrc": "/assets/img/tinyfishing.png",
-        "linksrc": "/Vafor_IT/tiny-fishing",
-        "foldername": "tiny-fishing"
-    },
-    {
-        "name": "Vex 6",
-        "imgsrc": "/assets/img/vex6.png",
-        "linksrc": "/Vafor_IT/vex6",
-        "foldername": "vex-6"
-    },
-    {
-        "name": "Basketball Stars",
-        "imgsrc": "/assets/img/basketball.jpeg",
-        "linksrc": "/Vafor_IT/basketball-stars",
-        "foldername": "basketball-stars"
-    },
-    {
-        "name": "Super Mario 64",
-        "imgsrc": "/assets/img/sm64.jpg",
-        "linksrc": "/Vafor_IT/sm64",
-        "foldername": "super-mario-64"
-    },
-    {
-        "name": "60 Second Burger Run",
-        "imgsrc": "/assets/img/burger.png",
-        "linksrc": "/Vafor_IT/60min/index.html",
-        "foldername": "60-second-burger-run"
-    },
-    {
-        "name": "Paper.io 2",
-        "imgsrc": "/assets/img/paper.jpg",
-        "linksrc": "/Vafor_IT/paper-io-2/index.html",
-        "foldername": "paper.io-2"
-    },
-    {
-        "name": "Cat Mario",
-        "imgsrc": "/assets/img/cat.png",
-        "linksrc": "/Vafor_IT/cat-mario/index.html",
-        "foldername": "cat-mario"
-    },
-    {
-        "name": "Idle Breakout",
-        "imgsrc": "/assets/img/idle.png",
-        "linksrc": "/Vafor_IT/idle-breakout/",
-        "foldername": "idle-breakout"
-    },
-    {
-        "name": "Ducklife",
-        "imgsrc": "/assets/img/duck.jpeg",
-        "linksrc": "/Vafor_IT/ducklife1/index.html",
-        "foldername": "ducklife"
-    },
-    {
-        "name": "Ducklife2",
-        "imgsrc": "/assets/img/ducklife2.webp",
-        "linksrc": "/Vafor_IT/ducklife2",
-        "foldername": "ducklife2"
-    },
-    {
-        "name": "Ducklife3",
-        "imgsrc": "/assets/img/ducklife3.webp",
-        "linksrc": "/Vafor_IT/ducklife3",
-        "foldername": "ducklife3"
-    },
-    {
-        "name": "Pixel Gun 2",
-        "imgsrc": "/assets/img/pixelgun.jfif",
-        "linksrc": "/Vafor_IT/pixelgun/maxwellstevenson.com.html",
-        "foldername": "pixel-gun-2"
-    },
-    {
-        "name": "Drive Mad",
-        "imgsrc": "/assets/img/drivemad.jpeg",
-        "linksrc": "/Vafor_IT/drive-mad/",
-        "foldername": "drive-mad"
-    },
-    {
-        "name": "Cluster Rush",
-        "imgsrc": "/assets/img/bustergush.png",
-        "linksrc": "/Vafor_IT/bustergush",
-        "foldername": "cluster-rush"
-    },
-    {
-        "name": "10 Minutes Till Dawn",
-        "imgsrc": "/assets/img/20min.jfif",
-        "linksrc": "/Vafor_IT/10-minutes-till-dawn/",
-        "foldername": "10-minutes-till-dawn"
-    },
-    {
-        "name": "Google Snake",
-        "imgsrc": "/assets/img/drakethesnake.png",
-        "linksrc": "/Vafor_IT/google-snake/",
-        "foldername": "google-snake"
-    },
-    {
-        "name": "Gun Mayhem 2",
-        "imgsrc": "/assets/img/gunmayhem.jpeg",
-        "linksrc": "/Vafor_IT/gunmayhem2/",
-        "foldername": "gun-mayhem-2"
-    },
-    {
-        "name": "Generic Fishing",
-        "imgsrc": "/assets/img/fishing.png",
-        "linksrc": "/Vafor_IT/fishing_game/",
-        "foldername": "generic-fishing"
-    },
-    {
-        "name": "FNAF",
-        "imgsrc": "/assets/img/fnaf.webp",
-        "linksrc": "/Vafor_IT/scarybear/",
-        "foldername": "fnaf"
-    },
-    {
-        "name": "Ninja vs Evilcorp",
-        "imgsrc": "/assets/img/ninja.png",
-        "linksrc": "/Vafor_IT/ninja.html",
-        "foldername": "ninja-vs-evilcorp"
-    },
-    {
-        "name": "CSGO Clicker",
-        "imgsrc": "/assets/img/csgo.png",
-        "linksrc": "/Vafor_IT/csgo_clicker/",
-        "foldername": "csgo-clicker"
-    },
-    {
-        "name": "Madalin Stunt Cars",
-        "imgsrc": "/assets/img/mcm.png",
-        "linksrc": "/Vafor_IT/mcm-files/",
-        "foldername": "madalin-stunt-cars"
-    },
-    {
-        "name": "Bitlife",
-        "imgsrc": "/assets/img/bitlife.jpeg",
-        "linksrc": "/Vafor_IT/bitlife/",
-        "foldername": "bitlife"
-    },
-    {
-        "name": "Snowrider",
-        "imgsrc": "/assets/img/snow.png",
-        "linksrc": "/Vafor_IT/Snow-Rider3D/index.html",
-        "foldername": "snowrider"
-    },
-    {
-        "name": "Jetpack Joyride",
-        "imgsrc": "/assets/img/jet.png",
-        "linksrc": "/Vafor_IT/jetpack-joyride/",
-        "foldername": "jetpack-joyride"
-    },
-    {
-        "name": "Impossible Quiz",
-        "imgsrc": "/assets/img/averageschool.png",
-        "linksrc": "/Vafor_IT/impossiblequiz/",
-        "foldername": "impossible-quiz"
-    },
-    {
-        "name": "Pappas Pizzaria",
-        "imgsrc": "/Vafor_IT/papaspizzaria/papaspizzaria.jpg",
-        "linksrc": "/Vafor_IT/papaspizzaria/",
-        "foldername": "pappas-pizzeria"
-    },
-    {
-        "name": "Pappas Freezeria",
-        "imgsrc": "/assets/img/papas-freezeria.webp",
-        "linksrc": "/Vafor_IT/papasfreezeria/",
-        "foldername": "pappas-freezeria"
-    },
-    {
-        "name": "Pappas Pancakearia",
-        "imgsrc": "/assets/img/papaspancakes.png",
-        "linksrc": "/Vafor_IT/papaspancakeareia/",
-        "foldername": "pappas-pancakearia"
-    },
-    {
-        "name": "World Hardest gm 2",
-        "imgsrc": "/Vafor_IT/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
-        "linksrc": "/Vafor_IT/worlds-hardest-game-2/index.html",
-        "foldername": "worlds-hardest-gm-2"
-    },
-    {
-        "name": "Rooftop Snipers",
-        "imgsrc": "/assets/img/rooft.png",
-        "linksrc": "/Vafor_IT/rooftop-snipers/",
-        "foldername": "rooftop-snipers"
-    },
-    {
-        "name": "Stack",
-        "imgsrc": "/Vafor_IT/stack/stack.png",
-        "linksrc": "/Vafor_IT/stack/",
-        "foldername": "stack"
-    },
-    {
-        "name": "Tanuki Sunset",
-        "imgsrc": "/Vafor_IT/tanuki-sunset/img/logo.png",
-        "linksrc": "/Vafor_IT/tanuki-sunset/",
-        "foldername": "tanuki-sunset"
-    },
-    {
-        "name": "Soccer Random",
-        "imgsrc": "/Vafor_IT/soccer-random/splash.png",
-        "linksrc": "/Vafor_IT/soccer-random/",
-        "foldername": "soccer-random"
-    },
-    {
-        "name": "Subway Surfers",
-        "imgsrc": "/Vafor_IT/subway-surfers/img/splash.jpg",
-        "linksrc": "/Vafor_IT/subway-surfers/",
-        "foldername": "subway-surfers"
-    },
-    {
-        "name": "Learn to Fly",
-        "imgsrc": "/assets/img/learntofly.jpeg",
-        "linksrc": "/Vafor_IT/learntofly/",
-        "foldername": "learn-to-fly"
-    },
-    {
-        "name": "Learn2fly",
-        "imgsrc": "/assets/img/learn.jpeg",
-        "linksrc": "/Vafor_IT/learn2fly/index.html",
-        "foldername": "learn2fly"
-    },
-    {
-        "name": "Hilldraw",
-        "imgsrc": "/Vafor_IT/hilldraw/icons/icon-512.png",
-        "linksrc": "/Vafor_IT/hilldraw/",
-        "foldername": "hilldraw"
-    },
-    {
-        "name": "Snowball io",
-        "imgsrc": "/assets/img/snowgamingisdead.jpg",
-        "linksrc": "/Vafor_IT/snowballio/",
-        "foldername": "snowball-io"
-    },
-    {
-        "name": "Fireboy and water girl",
-        "imgsrc": "/assets/img/fireandwater.jpg",
-        "linksrc": "/Vafor_IT/fireboywatergirlforesttemple/",
-        "foldername": "fireboy-and-watergirl"
-    },
-    {
-        "name": "Pixel Speedrun",
-        "imgsrc": "/assets/img/pixelspeedrun.png",
-        "linksrc": "/Vafor_IT/pixellyballs/",
-        "foldername": "pixel-speedrun"
-    },
-    {
-        "name": "A Dance of Fire and Ice",
-        "imgsrc": "/Vafor_IT/dances/splash.png",
-        "linksrc": "/Vafor_IT/dances/",
-        "foldername": "a-dance-of-fire-and-ice"
-    },
-    {
-        "name": "Giraffes Volleyball",
-        "imgsrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f/favico.png",
-        "linksrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f",
-        "foldername": "giraffes-volleyball"
-    },
-    {
-        "name": "Deepest Sword",
-        "imgsrc": "/assets/img/deepest-sword.png",
-        "linksrc": "/Vafor_IT/deepswordayo/",
-        "foldername": "deepest-sword"
-    },
-    {
-        "name": "Bottle Flip 3d",
-        "imgsrc": "/assets/img/sddefault.jpg",
-        "linksrc": "/Vafor_IT/bottleflippingdiedin20126/",
-        "foldername": "bottle-flip-3d"
-    },
-    {
-        "name": "Choppy Orc",
-        "imgsrc": "/assets/img/thumb_2.jpg",
-        "linksrc": "/Vafor_IT/ChoppyOrc",
-        "foldername": "choppy-orc"
-    },
-    {
-        "name": "Minecraft (1.5)",
-        "imgsrc": "/assets/img/imgoingtoslapmartin.png",
-        "linksrc": "/Vafor_IT/precision-client/precision-client-v34.6/public/",
-        "foldername": "minecraft"
-    },
-    {
-        "name": "Funny Shooter",
-        "imgsrc": "/assets/img/funnyshooter.webp",
-        "linksrc": "/Vafor_IT/VAzg42bVjmum4loaFEocbmzmkIYQggJd/",
-        "foldername": "funny-shooter"
-    },
-    {
-        "name": "Hole io",
-        "imgsrc": "/assets/img/hole.io.jfif",
-        "linksrc": "/Vafor_IT/hole.io/",
-        "foldername": "hole-io"
-    },
-    {
-        "name": "Tomb of the mask",
-        "imgsrc": "/assets/img/tomb-of-the-mask-logo.jpeg",
-        "linksrc": "/Vafor_IT/totm",
-        "foldername": "tomb-of-the-mask"
-    },
-    {
-        "name": "Doge Miner",
-        "imgsrc": "/Vafor_IT/doge/img/dogeminer_300x300.png",
-        "linksrc": "/Vafor_IT/doge/",
-        "foldername": "doge-miner"
-    },
-    {
-        "name": "Run 3",
-        "imgsrc": "/Vafor_IT/run3editor/loading.png",
-        "linksrc": "/Vafor_IT/run3editor/",
-        "foldername": "run-3"
-    },
-    {
-        "name": "Sausage Flip",
-        "imgsrc": "/assets/img/sausage.jpg",
-        "linksrc": "/Vafor_IT/sausage/",
-        "foldername": "sausage-flip"
-    },
-    {
-        "name": "Sandstrike.io",
-        "imgsrc": "/assets/img/sanstrike.webp",
-        "linksrc": "/Vafor_IT/sanstrike.io/",
-        "foldername": "sandstrike.io"
-    },
-    {
-        "name": "Color Tunnel",
-        "imgsrc": "/Vafor_IT/colourtunnel/TemplateData/logo.png",
-        "linksrc": "/Vafor_IT/colourtunnel",
-        "foldername": "color-tunnel"
-    },
-    {
-        "name": "Polytrack",
-        "imgsrc": "/assets/img/poly.jpeg",
-        "linksrc": "/Vafor_IT/polytrack",
-        "foldername": "polytrack"
-    },
-    {
-        "name": "Friday Night Funkin",
-        "imgsrc": "/Vafor_IT/fnfweek7/friday-night-funkin.png",
-        "linksrc": "/Vafor_IT/fnfweek7/",
-        "foldername": "friday-night-funkin"
-    },
-    {
-        "name": "Last Horizon",
-        "imgsrc": "/assets/img/lasthorizon1.jfif",
-        "linksrc": "/Vafor_IT/lasthorizon1/",
-        "foldername": "last-horizon"
-    },
-    {
-        "name": "Fruit Ninja",
-        "imgsrc": "/Vafor_IT/fruitninja/FruitNinjaTeaser.jpg",
-        "linksrc": "/Vafor_IT/fruitninja/",
-        "foldername": "fruit-ninja"
-    },
-    {
-        "name": "Rocket Pult",
-        "imgsrc": "/assets/img/rocketpult.png",
-        "linksrc": "/Vafor_IT/rocketpult/",
-        "foldername": "rocket-pult"
-    },
-    {
-        "name": "Block Blast",
-        "imgsrc": "/assets/img/blockblast.jpeg",
-        "linksrc": "/Vafor_IT/blockblast/",
-        "foldername": "block-blast"
-    },
-    {
-        "name": "Moto X3m",
-        "imgsrc": "/assets/img/moto.jfif",
-        "linksrc": "/Vafor_IT/mx3m",
-        "foldername": "moto-x3m"
-    },
-    {
-        "name": "Moto X3m Winter",
-        "imgsrc": "/assets/img/moto-x3m-winter.jpeg",
-        "linksrc": "/Vafor_IT/mx3m-winter",
-        "foldername": "moto-x3m-winter"
-    },
-    {
-        "name": "Moto X3m Spookyland",
-        "imgsrc": "/assets/img/spookyland.png",
-        "linksrc": "/Vafor_IT/mx3m-spookyland",
-        "foldername": "moto-x3m-spookyland"
-    },
-    {
-        "name": "Moto X3m Pool Party",
-        "imgsrc": "/assets/img/poolparty.png",
-        "linksrc": "/Vafor_IT/mx3m-poolparty",
-        "foldername": "moto-x3m-pool-party"
-    },
-    {
-        "name": "Eggy car",
-        "imgsrc": "/assets/img/eggycar.png",
-        "linksrc": "/Vafor_IT/eggycar",
-        "foldername": "eggycar"
-    },
-        {
-        "name": "Bob the robber",
-        "imgsrc": "/assets/img/bob.jpg",
-        "linksrc": "/Vafor_IT/BobTheRobber",
-        "foldername": "bob-the-robber"
-    },
-    {
-        "name": "Bob the robber 2",
-        "imgsrc": "/assets/img/bob2.jpeg",
-        "linksrc": "/Vafor_IT/BobTheRobber2",
-        "foldername": "bob-the-robber-2"
-    },
-    {
-        "name": "Bob the robber 3",
-        "imgsrc": "/assets/img/bob3.jfif",
-        "linksrc": "/Vafor_IT/BobTheRobber3",
-        "foldername": "bob-the-robber-3"
-    },
-    {
-        "name": "Bob the robber 4",
-        "imgsrc": "/assets/img/bob4.jpg",
-        "linksrc": "/Vafor_IT/BobTheRobber4",
-        "foldername": "bob-the-robber-4"
-    },
-    {
-        "name": "2048",
-        "imgsrc": "/assets/img/2048.png",
-        "linksrc": "/Vafor_IT/2048",
-        "foldername": "2048"
-    },
-    {
-        "name": "Tetris",
-        "imgsrc": "/assets/img/tetris.png",
-        "linksrc": "/Vafor_IT/tetris",
-        "foldername": "tetris"
-    },
-    {
-        "name": "Crazy Cattle",
-        "imgsrc": "/assets/img/crazycattle.jpg",
-        "linksrc": "/Vafor_IT/crazycattle",
-        "foldername": "crazy-cattle"
-    },
-    {
-        "name": "Snake is Mlg Edition",
-        "imgsrc": "/assets/img/snakemlg.jfif",
-        "linksrc": "/Vafor_IT/snakemlg",
-        "foldername": "snake-is-mlg"
-    },
-    {
-        "name": "Tower of Destiny",
-        "imgsrc": "/assets/img/towerofdestiny.png",
-        "linksrc": "/Vafor_IT/TowerOfDestiny",
-        "foldername": "tower-of-destiny"
-    }
-
+  {
+    "name": "Stickman Hook",
+    "imgsrc": "/assets/img/stickman.jpeg",
+    "linksrc": "/Vafor_IT/hookingman/",
+    "foldername": "stickman-hook",
+    "category": "Action"
+  },
+  {
+    "name": "1v1.lol",
+    "imgsrc": "/assets/img/1v1.webp",
+    "linksrc": "/Vafor_IT/1a3b7c9e1f2g4h5j6k8l0m1n2p3q4r5s",
+    "foldername": "1v1.lol",
+    "category": "Action"
+  },
+  {
+    "name": "Buildnow.gg",
+    "imgsrc": "/assets/img/builf.png",
+    "linksrc": "/Vafor_IT/a3f5d9e7c2b8a4e1f3d5c7e9b0a4f6c8/",
+    "foldername": "buildnow.gg",
+    "category": "Action"
+  },
+  {
+    "name": "Cookie Clicker",
+    "imgsrc": "/assets/img/cookieclicker.webp",
+    "linksrc": "/Vafor_IT/cookie-clicker/",
+    "foldername": "cookie-clicker",
+    "category": "Platformer"
+  },
+  {
+    "name": "Retro Football",
+    "imgsrc": "/assets/img/retrobowl.jpeg",
+    "linksrc": "/Vafor_IT/retrobowl/",
+    "foldername": "retro-football",
+    "category": "Adventure"
+  },
+  {
+    "name": "Agar.io",
+    "imgsrc": "/assets/img/agar.png",
+    "linksrc": "/Vafor_IT/jptr-agario/web/",
+    "foldername": "agar.io",
+    "category": "Platformer"
+  },
+  {
+    "name": "Smash Karts",
+    "imgsrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3/9c9e529b14731be871b07b89660bbc2a.png",
+    "linksrc": "/Vafor_IT/d2f6b8c9e4a1f7d5a3c9e1b8f6d4a2e3",
+    "foldername": "smash-karts",
+    "category": "Adventure"
+  },
+  {
+    "name": "Slope",
+    "imgsrc": "/assets/img/slope2.png",
+    "linksrc": "/Vafor_IT/slope",
+    "foldername": "slope",
+    "category": "Platformer"
+  },
+  {
+    "name": "Yohoho.io",
+    "imgsrc": "/assets/img/pirates2.jfif",
+    "linksrc": "/Vafor_IT/pirates",
+    "foldername": "yohoho.io",
+    "category": "Adventure"
+  },
+  {
+    "name": "Gun Spin",
+    "imgsrc": "/assets/img/gunspin.png",
+    "linksrc": "/Vafor_IT/gunspin",
+    "foldername": "gunspin",
+    "category": "Adventure"
+  },
+  {
+    "name": "Monkey Mart",
+    "imgsrc": "/assets/img/monkey.jfif",
+    "linksrc": "/Vafor_IT/ihatemonkeys",
+    "foldername": "monkey-mart",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Awesome Tanks 2",
+    "imgsrc": "/assets/img/tanks2.jfif",
+    "linksrc": "/Vafor_IT/awesometanks2/",
+    "foldername": "awesome-tanks-2",
+    "category": "Action"
+  },
+  {
+    "name": "Time Shooter 3",
+    "imgsrc": "/assets/img/superhot.jfif",
+    "linksrc": "/Vafor_IT/time-shooter-3",
+    "foldername": "time-shooter-3",
+    "category": "Action"
+  },
+  {
+    "name": "Sling Drift",
+    "imgsrc": "/assets/img/slingdrift.png",
+    "linksrc": "/Vafor_IT/badtaxidriver",
+    "foldername": "sling-drift",
+    "category": "Car"
+  },
+  {
+    "name": "Drift Boss",
+    "imgsrc": "/assets/img/drift.jpeg",
+    "linksrc": "/Vafor_IT/germany-drift",
+    "foldername": "drift-boss",
+    "category": "Action"
+  },
+  {
+    "name": "Bank Robbery",
+    "imgsrc": "/assets/img/bank4.png",
+    "linksrc": "/Vafor_IT/bank",
+    "foldername": "bank-robbery",
+    "category": "Adventure"
+  },
+  {
+    "name": "Ovo",
+    "imgsrc": "/assets/img/ovo.png",
+    "linksrc": "/Vafor_IT/ovo",
+    "foldername": "ovo",
+    "category": "Action"
+  },
+  {
+    "name": "Tiny Fishing",
+    "imgsrc": "/assets/img/tinyfishing.png",
+    "linksrc": "/Vafor_IT/tiny-fishing",
+    "foldername": "tiny-fishing",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Vex 6",
+    "imgsrc": "/assets/img/vex6.png",
+    "linksrc": "/Vafor_IT/vex6",
+    "foldername": "vex-6",
+    "category": "Platformer"
+  },
+  {
+    "name": "Basketball Stars",
+    "imgsrc": "/assets/img/basketball.jpeg",
+    "linksrc": "/Vafor_IT/basketball-stars",
+    "foldername": "basketball-stars",
+    "category": "Action"
+  },
+  {
+    "name": "Super Mario 64",
+    "imgsrc": "/assets/img/sm64.jpg",
+    "linksrc": "/Vafor_IT/sm64",
+    "foldername": "super-mario-64",
+    "category": "Platformer"
+  },
+  {
+    "name": "60 Second Burger Run",
+    "imgsrc": "/assets/img/burger.png",
+    "linksrc": "/Vafor_IT/60min/index.html",
+    "foldername": "60-second-burger-run",
+    "category": "Adventure"
+  },
+  {
+    "name": "Paper.io 2",
+    "imgsrc": "/assets/img/paper.jpg",
+    "linksrc": "/Vafor_IT/paper-io-2/index.html",
+    "foldername": "paper.io-2",
+    "category": "Action"
+  },
+  {
+    "name": "Cat Mario",
+    "imgsrc": "/assets/img/cat.png",
+    "linksrc": "/Vafor_IT/cat-mario/index.html",
+    "foldername": "cat-mario",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Idle Breakout",
+    "imgsrc": "/assets/img/idle.png",
+    "linksrc": "/Vafor_IT/idle-breakout/",
+    "foldername": "idle-breakout",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Ducklife",
+    "imgsrc": "/assets/img/duck.jpeg",
+    "linksrc": "/Vafor_IT/ducklife1/index.html",
+    "foldername": "ducklife",
+    "category": "Car"
+  },
+  {
+    "name": "Ducklife2",
+    "imgsrc": "/assets/img/ducklife2.webp",
+    "linksrc": "/Vafor_IT/ducklife2",
+    "foldername": "ducklife2",
+    "category": "Action"
+  },
+  {
+    "name": "Ducklife3",
+    "imgsrc": "/assets/img/ducklife3.webp",
+    "linksrc": "/Vafor_IT/ducklife3",
+    "foldername": "ducklife3",
+    "category": "Platformer"
+  },
+  {
+    "name": "Pixel Gun 2",
+    "imgsrc": "/assets/img/pixelgun.jfif",
+    "linksrc": "/Vafor_IT/pixelgun/maxwellstevenson.com.html",
+    "foldername": "pixel-gun-2",
+    "category": "Car"
+  },
+  {
+    "name": "Drive Mad",
+    "imgsrc": "/assets/img/drivemad.jpeg",
+    "linksrc": "/Vafor_IT/drive-mad/",
+    "foldername": "drive-mad",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Cluster Rush",
+    "imgsrc": "/assets/img/bustergush.png",
+    "linksrc": "/Vafor_IT/bustergush",
+    "foldername": "cluster-rush",
+    "category": "Adventure"
+  },
+  {
+    "name": "10 Minutes Till Dawn",
+    "imgsrc": "/assets/img/20min.jfif",
+    "linksrc": "/Vafor_IT/10-minutes-till-dawn/",
+    "foldername": "10-minutes-till-dawn",
+    "category": "Car"
+  },
+  {
+    "name": "Google Snake",
+    "imgsrc": "/assets/img/drakethesnake.png",
+    "linksrc": "/Vafor_IT/google-snake/",
+    "foldername": "google-snake",
+    "category": "Adventure"
+  },
+  {
+    "name": "Gun Mayhem 2",
+    "imgsrc": "/assets/img/gunmayhem.jpeg",
+    "linksrc": "/Vafor_IT/gunmayhem2/",
+    "foldername": "gun-mayhem-2",
+    "category": "Car"
+  },
+  {
+    "name": "Generic Fishing",
+    "imgsrc": "/assets/img/fishing.png",
+    "linksrc": "/Vafor_IT/fishing_game/",
+    "foldername": "generic-fishing",
+    "category": "Adventure"
+  },
+  {
+    "name": "FNAF",
+    "imgsrc": "/assets/img/fnaf.webp",
+    "linksrc": "/Vafor_IT/scarybear/",
+    "foldername": "fnaf",
+    "category": "Car"
+  },
+  {
+    "name": "Ninja vs Evilcorp",
+    "imgsrc": "/assets/img/ninja.png",
+    "linksrc": "/Vafor_IT/ninja.html",
+    "foldername": "ninja-vs-evilcorp",
+    "category": "Puzzle"
+  },
+  {
+    "name": "CSGO Clicker",
+    "imgsrc": "/assets/img/csgo.png",
+    "linksrc": "/Vafor_IT/csgo_clicker/",
+    "foldername": "csgo-clicker",
+    "category": "Platformer"
+  },
+  {
+    "name": "Madalin Stunt Cars",
+    "imgsrc": "/assets/img/mcm.png",
+    "linksrc": "/Vafor_IT/mcm-files/",
+    "foldername": "madalin-stunt-cars",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Bitlife",
+    "imgsrc": "/assets/img/bitlife.jpeg",
+    "linksrc": "/Vafor_IT/bitlife/",
+    "foldername": "bitlife",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Snowrider",
+    "imgsrc": "/assets/img/snow.png",
+    "linksrc": "/Vafor_IT/Snow-Rider3D/index.html",
+    "foldername": "snowrider",
+    "category": "Platformer"
+  },
+  {
+    "name": "Jetpack Joyride",
+    "imgsrc": "/assets/img/jet.png",
+    "linksrc": "/Vafor_IT/jetpack-joyride/",
+    "foldername": "jetpack-joyride",
+    "category": "Car"
+  },
+  {
+    "name": "Impossible Quiz",
+    "imgsrc": "/assets/img/averageschool.png",
+    "linksrc": "/Vafor_IT/impossiblequiz/",
+    "foldername": "impossible-quiz",
+    "category": "Action"
+  },
+  {
+    "name": "Pappas Pizzaria",
+    "imgsrc": "/Vafor_IT/papaspizzaria/papaspizzaria.jpg",
+    "linksrc": "/Vafor_IT/papaspizzaria/",
+    "foldername": "pappas-pizzeria",
+    "category": "Adventure"
+  },
+  {
+    "name": "Pappas Freezeria",
+    "imgsrc": "/assets/img/papas-freezeria.webp",
+    "linksrc": "/Vafor_IT/papasfreezeria/",
+    "foldername": "pappas-freezeria",
+    "category": "Platformer"
+  },
+  {
+    "name": "Pappas Pancakearia",
+    "imgsrc": "/assets/img/papaspancakes.png",
+    "linksrc": "/Vafor_IT/papaspancakeareia/",
+    "foldername": "pappas-pancakearia",
+    "category": "Platformer"
+  },
+  {
+    "name": "World Hardest gm 2",
+    "imgsrc": "/Vafor_IT/worlds-hardest-game-2/the-worlds-hardest-game-2.jpg",
+    "linksrc": "/Vafor_IT/worlds-hardest-game-2/index.html",
+    "foldername": "worlds-hardest-gm-2",
+    "category": "Platformer"
+  },
+  {
+    "name": "Rooftop Snipers",
+    "imgsrc": "/assets/img/rooft.png",
+    "linksrc": "/Vafor_IT/rooftop-snipers/",
+    "foldername": "rooftop-snipers",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Stack",
+    "imgsrc": "/Vafor_IT/stack/stack.png",
+    "linksrc": "/Vafor_IT/stack/",
+    "foldername": "stack",
+    "category": "Adventure"
+  },
+  {
+    "name": "Tanuki Sunset",
+    "imgsrc": "/Vafor_IT/tanuki-sunset/img/logo.png",
+    "linksrc": "/Vafor_IT/tanuki-sunset/",
+    "foldername": "tanuki-sunset",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Soccer Random",
+    "imgsrc": "/Vafor_IT/soccer-random/splash.png",
+    "linksrc": "/Vafor_IT/soccer-random/",
+    "foldername": "soccer-random",
+    "category": "Car"
+  },
+  {
+    "name": "Subway Surfers",
+    "imgsrc": "/Vafor_IT/subway-surfers/img/splash.jpg",
+    "linksrc": "/Vafor_IT/subway-surfers/",
+    "foldername": "subway-surfers",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Learn to Fly",
+    "imgsrc": "/assets/img/learntofly.jpeg",
+    "linksrc": "/Vafor_IT/learntofly/",
+    "foldername": "learn-to-fly",
+    "category": "Platformer"
+  },
+  {
+    "name": "Learn2fly",
+    "imgsrc": "/assets/img/learn.jpeg",
+    "linksrc": "/Vafor_IT/learn2fly/index.html",
+    "foldername": "learn2fly",
+    "category": "Car"
+  },
+  {
+    "name": "Hilldraw",
+    "imgsrc": "/Vafor_IT/hilldraw/icons/icon-512.png",
+    "linksrc": "/Vafor_IT/hilldraw/",
+    "foldername": "hilldraw",
+    "category": "Platformer"
+  },
+  {
+    "name": "Snowball io",
+    "imgsrc": "/assets/img/snowgamingisdead.jpg",
+    "linksrc": "/Vafor_IT/snowballio/",
+    "foldername": "snowball-io",
+    "category": "Car"
+  },
+  {
+    "name": "Fireboy and water girl",
+    "imgsrc": "/assets/img/fireandwater.jpg",
+    "linksrc": "/Vafor_IT/fireboywatergirlforesttemple/",
+    "foldername": "fireboy-and-watergirl",
+    "category": "Adventure"
+  },
+  {
+    "name": "Pixel Speedrun",
+    "imgsrc": "/assets/img/pixelspeedrun.png",
+    "linksrc": "/Vafor_IT/pixellyballs/",
+    "foldername": "pixel-speedrun",
+    "category": "Adventure"
+  },
+  {
+    "name": "A Dance of Fire and Ice",
+    "imgsrc": "/Vafor_IT/dances/splash.png",
+    "linksrc": "/Vafor_IT/dances/",
+    "foldername": "a-dance-of-fire-and-ice",
+    "category": "Platformer"
+  },
+  {
+    "name": "Giraffes Volleyball",
+    "imgsrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f/favico.png",
+    "linksrc": "/Vafor_IT/7a9b3c4e2f6d1e8c5a2f4b7d9e3c0a6f",
+    "foldername": "giraffes-volleyball",
+    "category": "Action"
+  },
+  {
+    "name": "Deepest Sword",
+    "imgsrc": "/assets/img/deepest-sword.png",
+    "linksrc": "/Vafor_IT/deepswordayo/",
+    "foldername": "deepest-sword",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Bottle Flip 3d",
+    "imgsrc": "/assets/img/sddefault.jpg",
+    "linksrc": "/Vafor_IT/bottleflippingdiedin20126/",
+    "foldername": "bottle-flip-3d",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Choppy Orc",
+    "imgsrc": "/assets/img/thumb_2.jpg",
+    "linksrc": "/Vafor_IT/ChoppyOrc",
+    "foldername": "choppy-orc",
+    "category": "Action"
+  },
+  {
+    "name": "Minecraft (1.5)",
+    "imgsrc": "/assets/img/imgoingtoslapmartin.png",
+    "linksrc": "/Vafor_IT/precision-client/precision-client-v34.6/public/",
+    "foldername": "minecraft",
+    "category": "Adventure"
+  },
+  {
+    "name": "Funny Shooter",
+    "imgsrc": "/assets/img/funnyshooter.webp",
+    "linksrc": "/Vafor_IT/VAzg42bVjmum4loaFEocbmzmkIYQggJd/",
+    "foldername": "funny-shooter",
+    "category": "Car"
+  },
+  {
+    "name": "Hole io",
+    "imgsrc": "/assets/img/hole.io.jfif",
+    "linksrc": "/Vafor_IT/hole.io/",
+    "foldername": "hole-io",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Tomb of the mask",
+    "imgsrc": "/assets/img/tomb-of-the-mask-logo.jpeg",
+    "linksrc": "/Vafor_IT/totm",
+    "foldername": "tomb-of-the-mask",
+    "category": "Action"
+  },
+  {
+    "name": "Doge Miner",
+    "imgsrc": "/Vafor_IT/doge/img/dogeminer_300x300.png",
+    "linksrc": "/Vafor_IT/doge/",
+    "foldername": "doge-miner",
+    "category": "Car"
+  },
+  {
+    "name": "Run 3",
+    "imgsrc": "/Vafor_IT/run3editor/loading.png",
+    "linksrc": "/Vafor_IT/run3editor/",
+    "foldername": "run-3",
+    "category": "Car"
+  },
+  {
+    "name": "Sausage Flip",
+    "imgsrc": "/assets/img/sausage.jpg",
+    "linksrc": "/Vafor_IT/sausage/",
+    "foldername": "sausage-flip",
+    "category": "Adventure"
+  },
+  {
+    "name": "Sandstrike.io",
+    "imgsrc": "/assets/img/sanstrike.webp",
+    "linksrc": "/Vafor_IT/sanstrike.io/",
+    "foldername": "sandstrike.io",
+    "category": "Platformer"
+  },
+  {
+    "name": "Color Tunnel",
+    "imgsrc": "/Vafor_IT/colourtunnel/TemplateData/logo.png",
+    "linksrc": "/Vafor_IT/colourtunnel",
+    "foldername": "color-tunnel",
+    "category": "Action"
+  },
+  {
+    "name": "Polytrack",
+    "imgsrc": "/assets/img/poly.jpeg",
+    "linksrc": "/Vafor_IT/polytrack",
+    "foldername": "polytrack",
+    "category": "Car"
+  },
+  {
+    "name": "Friday Night Funkin",
+    "imgsrc": "/Vafor_IT/fnfweek7/friday-night-funkin.png",
+    "linksrc": "/Vafor_IT/fnfweek7/",
+    "foldername": "friday-night-funkin",
+    "category": "Car"
+  },
+  {
+    "name": "Last Horizon",
+    "imgsrc": "/assets/img/lasthorizon1.jfif",
+    "linksrc": "/Vafor_IT/lasthorizon1/",
+    "foldername": "last-horizon",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Fruit Ninja",
+    "imgsrc": "/Vafor_IT/fruitninja/FruitNinjaTeaser.jpg",
+    "linksrc": "/Vafor_IT/fruitninja/",
+    "foldername": "fruit-ninja",
+    "category": "Platformer"
+  },
+  {
+    "name": "Rocket Pult",
+    "imgsrc": "/assets/img/rocketpult.png",
+    "linksrc": "/Vafor_IT/rocketpult/",
+    "foldername": "rocket-pult",
+    "category": "Action"
+  },
+  {
+    "name": "Block Blast",
+    "imgsrc": "/assets/img/blockblast.jpeg",
+    "linksrc": "/Vafor_IT/blockblast/",
+    "foldername": "block-blast",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Moto X3m",
+    "imgsrc": "/assets/img/moto.jfif",
+    "linksrc": "/Vafor_IT/mx3m",
+    "foldername": "moto-x3m",
+    "category": "Adventure"
+  },
+  {
+    "name": "Moto X3m Winter",
+    "imgsrc": "/assets/img/moto-x3m-winter.jpeg",
+    "linksrc": "/Vafor_IT/mx3m-winter",
+    "foldername": "moto-x3m-winter",
+    "category": "Car"
+  },
+  {
+    "name": "Moto X3m Spookyland",
+    "imgsrc": "/assets/img/spookyland.png",
+    "linksrc": "/Vafor_IT/mx3m-spookyland",
+    "foldername": "moto-x3m-spookyland",
+    "category": "Car"
+  },
+  {
+    "name": "Moto X3m Pool Party",
+    "imgsrc": "/assets/img/poolparty.png",
+    "linksrc": "/Vafor_IT/mx3m-poolparty",
+    "foldername": "moto-x3m-pool-party",
+    "category": "Action"
+  },
+  {
+    "name": "Eggy car",
+    "imgsrc": "/assets/img/eggycar.png",
+    "linksrc": "/Vafor_IT/eggycar",
+    "foldername": "eggycar",
+    "category": "Car"
+  },
+  {
+    "name": "Bob the robber",
+    "imgsrc": "/assets/img/bob.jpg",
+    "linksrc": "/Vafor_IT/BobTheRobber",
+    "foldername": "bob-the-robber",
+    "category": "Platformer"
+  },
+  {
+    "name": "Bob the robber 2",
+    "imgsrc": "/assets/img/bob2.jpeg",
+    "linksrc": "/Vafor_IT/BobTheRobber2",
+    "foldername": "bob-the-robber-2",
+    "category": "Adventure"
+  },
+  {
+    "name": "Bob the robber 3",
+    "imgsrc": "/assets/img/bob3.jfif",
+    "linksrc": "/Vafor_IT/BobTheRobber3",
+    "foldername": "bob-the-robber-3",
+    "category": "Adventure"
+  },
+  {
+    "name": "Bob the robber 4",
+    "imgsrc": "/assets/img/bob4.jpg",
+    "linksrc": "/Vafor_IT/BobTheRobber4",
+    "foldername": "bob-the-robber-4",
+    "category": "Platformer"
+  },
+  {
+    "name": "2048",
+    "imgsrc": "/assets/img/2048.png",
+    "linksrc": "/Vafor_IT/2048",
+    "foldername": "2048",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Tetris",
+    "imgsrc": "/assets/img/tetris.png",
+    "linksrc": "/Vafor_IT/tetris",
+    "foldername": "tetris",
+    "category": "Action"
+  },
+  {
+    "name": "Crazy Cattle",
+    "imgsrc": "/assets/img/crazycattle.jpg",
+    "linksrc": "/Vafor_IT/crazycattle",
+    "foldername": "crazy-cattle",
+    "category": "Platformer"
+  },
+  {
+    "name": "Snake is Mlg Edition",
+    "imgsrc": "/assets/img/snakemlg.jfif",
+    "linksrc": "/Vafor_IT/snakemlg",
+    "foldername": "snake-is-mlg",
+    "category": "Puzzle"
+  },
+  {
+    "name": "Tower of Destiny",
+    "imgsrc": "/assets/img/towerofdestiny.png",
+    "linksrc": "/Vafor_IT/TowerOfDestiny",
+    "foldername": "tower-of-destiny",
+    "category": "Puzzle"
+  }
 ]
