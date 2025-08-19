@@ -36,29 +36,13 @@ function createCategorySection(category) {
 
     section.style.display = 'none';
 }
-function toggleFavorite(button) {
-    const game = JSON.parse(button.dataset.game);
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    const isFavorite = favorites.includes(game.name);
 
-    if (isFavorite) {
-        favorites = favorites.filter(fav => fav !== game.name);
-        button.classList.remove('active');
-    } else {
-        favorites.push(game.name);
-        button.classList.add('active');
-    }
-
-    localStorage.setItem('favorites', JSON.stringify(favorites));
-}
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
-    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const grid = section.querySelector('.games-grid');
     grid.innerHTML = '';
 
     gamesList.forEach(game => {
-        const isFavorite = favorites.includes(game.name);
         const gameHTML = `
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
@@ -93,6 +77,7 @@ fetch('json/list.json')
             if (section) section.style.display = 'block';
         });
     });
+
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
