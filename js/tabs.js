@@ -50,7 +50,6 @@ function toggleFavorite(button) {
     }
 
     localStorage.setItem('favorites', JSON.stringify(favorites));
-    updateFavoritesDisplay();
 }
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
