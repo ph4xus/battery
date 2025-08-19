@@ -19,11 +19,6 @@ function showSection(id) {
 function createCategorySection(category) {
     if (categorySections[category]) return;
 
-    const li = document.createElement('li');
-    li.id = category.toLowerCase();
-    li.innerHTML = `<a>${category}</a>`;
-    navTabs.insertBefore(li, document.getElementById('all-games')); 
-
     const section = document.createElement('section');
     section.id = `${category.toLowerCase()}-games`;
     section.className = 'tab-content';
@@ -35,14 +30,27 @@ function createCategorySection(category) {
     categorySections[category] = section;
 
     section.style.display = 'none';
+
+    const li = document.createElement('li');
+    li.id = category.toLowerCase();
+    li.innerHTML = `<a>${category}</a>`;
+    navTabs.insertBefore(li, document.getElementById('all-games'));
+
+    li.querySelector('a').addEventListener('click', () => {
+        showSection(`${category.toLowerCase()}-games`);
+    });
 }
 
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
+    if (!section) return;
+
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const grid = section.querySelector('.games-grid');
     grid.innerHTML = '';
 
     gamesList.forEach(game => {
+        const isFavorite = favorites.includes(game.name);
         const gameHTML = `
             <div class="game-card">
                 <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
@@ -81,8 +89,8 @@ fetch('json/list.json')
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
-    const tabText = e.target.textContent.trim().toLowerCase();
-    const tabId = e.target.parentElement.id || tabText;
+    const parentLi = e.target.parentElement;
+    const tabId = parentLi.id || e.target.textContent.trim().toLowerCase();
 
     if (tabId === 'home') {
         hideAllSections();
@@ -91,8 +99,8 @@ navTabs.addEventListener('click', e => {
             if (section) section.style.display = 'block';
         });
     } else if (tabId === 'all-games') {
-        showSection('all-games2');
-    } else if (categorySections[tabId.charAt(0).toUpperCase() + tabId.slice(1)]) {
+        showSection('all-games');
+    } else if (categorySections[tabId]) {
         showSection(`${tabId}-games`);
     }
 });
