@@ -3,33 +3,27 @@ const tabContents = document.getElementById('tab-contents');
 let games = [];
 let categorySections = {};
 
-// Default sections that should show on Home
 const defaultSections = ['Favorites', 'last-played', 'top-10', 'last-10'];
 
-// Hide all sections
 function hideAllSections() {
     const sections = document.querySelectorAll('#tab-contents section');
     sections.forEach(section => section.style.display = 'none');
 }
 
-// Show a section by ID
 function showSection(id) {
     hideAllSections();
     const section = document.getElementById(id);
     if (section) section.style.display = 'block';
 }
 
-// Create a category section and tab
 function createCategorySection(category) {
     if (categorySections[category]) return;
 
-    // Create tab
     const li = document.createElement('li');
     li.id = category.toLowerCase();
     li.innerHTML = `<a>${category}</a>`;
     navTabs.insertBefore(li, document.getElementById('all-games')); 
 
-    // Create section
     const section = document.createElement('section');
     section.id = `${category.toLowerCase()}-games`;
     section.className = 'tab-content';
@@ -40,36 +34,36 @@ function createCategorySection(category) {
     tabContents.appendChild(section);
     categorySections[category] = section;
 
-    // Hide section initially
     section.style.display = 'none';
 }
 
-// Populate games in a section
 function populateGames(sectionId, gamesList) {
     const section = document.getElementById(sectionId);
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const grid = section.querySelector('.games-grid');
     grid.innerHTML = '';
 
     gamesList.forEach(game => {
+        const isFavorite = favorites.includes(game.name);
         const gameHTML = `
             <div class="game-card">
-                <a href="${game.linksrc}">
-                    <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}" />
-                    <p>${game.name}</p>
-                </a>
+                <button class="favorite-btn ${isFavorite ? 'active' : ''}" data-game='${JSON.stringify(game)}'>
+                    <i class="fas fa-star"></i>
+                </button>
+                <img src="https://ph4xus.github.io${game.imgsrc}" alt="${game.name}">
+                <h3>${game.name}</h3>
+                <a href="/gxmes/${game.foldername}" class="play-link" data-game='${JSON.stringify(game)}'>Play Now</a>
             </div>
         `;
         grid.innerHTML += gameHTML;
     });
 }
 
-// Fetch JSON and initialize
 fetch('json/list.json')
     .then(res => res.json())
     .then(data => {
         games = data;
 
-        // Create category sections dynamically
         const categories = [...new Set(games.map(g => g.category))];
         categories.forEach(category => {
             createCategorySection(category);
@@ -77,18 +71,58 @@ fetch('json/list.json')
             populateGames(`${category.toLowerCase()}-games`, catGames);
         });
 
-        // Populate All Games
         populateGames('all-games-grid', games);
 
-        // Show only default sections on page load
         hideAllSections();
         defaultSections.forEach(id => {
             const section = document.getElementById(id);
             if (section) section.style.display = 'block';
         });
     });
+function toggleFavorite(button) {
+    const game = JSON.parse(button.dataset.game);
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const isFavorite = favorites.includes(game.name);
 
-// Unified click handler for all tabs
+    if (isFavorite) {
+        favorites = favorites.filter(fav => fav !== game.name);
+        button.classList.remove('active');
+    } else {
+        favorites.push(game.name);
+        button.classList.add('active');
+    }
+
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+    updateFavoritesDisplay();
+}
+
+function updateFavoritesDisplay() {
+    const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    const favoritesSection = document.getElementById('Favorites');
+    const favoritesContainer = document.getElementById('favorites');
+
+    if (favorites.length > 0) {
+        favoritesSection.style.display = 'block';
+        fetchGames().then(games => {
+            const favoriteGames = games.filter(game => favorites.includes(game.name));
+            renderGames(favoriteGames, 'favorites');
+        });
+    } else {
+        favoritesSection.style.display = 'block';
+        favoritesContainer.innerHTML = `<p>No favorites yet, hit the star to add some!</p>`;
+    }
+
+    document.querySelectorAll('.game-card').forEach(card => {
+        const button = card.querySelector('.favorite-btn');
+        const game = JSON.parse(button.dataset.game);
+        const isFavorite = favorites.includes(game.name);
+        if (isFavorite) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+}
 navTabs.addEventListener('click', e => {
     if (e.target.tagName !== 'A') return;
 
@@ -104,7 +138,6 @@ navTabs.addEventListener('click', e => {
     } else if (tabId === 'all-games') {
         showSection('all-games2');
     } else if (categorySections[tabId.charAt(0).toUpperCase() + tabId.slice(1)]) {
-        // For dynamic category tabs
         showSection(`${tabId}-games`);
     }
 });
