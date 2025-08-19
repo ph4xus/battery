@@ -66,22 +66,15 @@ fetch('json/list.json')
             createCategorySection(category);
             const catGames = games.filter(g => g.category === category);
             populateGames(`${category.toLowerCase()}-games`, catGames);
+
+            categorySections[category].style.display = 'none';
         });
 
         populateGames('all-games-grid', games);
 
-        Array.from(document.querySelectorAll('#tab-contents section')).slice(0, 4).forEach(s => s.style.display = 'block');
+        const defaultSections = ['Favorites', 'last-played', 'top-10', 'last-10'];
+        defaultSections.forEach(id => {
+            const section = document.getElementById(id);
+            if (section) section.style.display = 'block';
+        });
     });
-
-navTabs.addEventListener('click', e => {
-    if (e.target.tagName !== 'A') return;
-    const parentLi = e.target.parentElement;
-    const tabId = parentLi.id || e.target.textContent.trim().toLowerCase();
-
-    if (tabId === 'home') {
-        hideAllSections();
-        Array.from(document.querySelectorAll('#tab-contents section')).slice(0, 4).forEach(section => section.style.display = 'block');
-    } else if (tabId === 'all-games') {
-        showSection('all-games2');
-    }
-});
